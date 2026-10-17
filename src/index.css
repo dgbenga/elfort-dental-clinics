@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* 60% Dominant Sky Surface (#EAF3FF) */
+    --background: 215 100% 96%;
+    /* Ink Navy Body Text (#2F4562) */
+    --foreground: 214 35% 28%;
+
+    /* 30% Secondary Card & Surface (#FFFFFF) */
+    --card: 0 0% 100%;
+    --card-foreground: 214 35% 28%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 214 35% 28%;
+
+    /* 10% Tertiary Authority Navy (#0B3A75) */
+    --primary: 213 83% 25%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 213 83% 19%;
+
+    /* Soft Sky Deep (#DCEBFC) */
+    --secondary: 214 77% 93%;
+    --secondary-foreground: 213 83% 25%;
+
+    /* Muted Slate (#576F8E) */
+    --muted: 214 77% 93%;
+    --muted-foreground: 214 22% 44%;
+
+    /* Soft Interactive Accent */
+    --accent: 214 77% 93%;
+    --accent-foreground: 213 83% 25%;
+
+    /* Medical Alert Red */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Dividers & Borders (#C7DCF3) */
+    --border: 214 58% 87%;
+    --input: 214 58% 87%;
+    --ring: 213 83% 25%;
+
+    /* 16px Soft Clinical Radius */
+    --radius: 1rem;
+    --radius-sm: 0.75rem;
+    --radius-lg: 1.25rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans min-h-screen;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.125rem; /* Senior-first floor: 18px body font */
+    line-height: 1.65;
+  }
+
+  /* Accessible focus indicator */
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
+}
+
+/* Reduced motion constraint */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Utility for mobile safe-area */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 1rem);
+}
