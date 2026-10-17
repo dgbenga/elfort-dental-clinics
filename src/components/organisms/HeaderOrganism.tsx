@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Mail, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { WhatsAppCTAButton } from '@/components/molecules/WhatsAppCTAButton';
 import { SITE_CONTENT, PRACTICE_CONFIG } from '@/data/content';
 
@@ -8,15 +8,15 @@ export const HeaderOrganism: React.FC = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-border shadow-xs">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
-        {/* Brand Identity */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+        {/* Brand Identity - Perfectly Aligned */}
         <a
           href="#"
-          className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-xl p-1"
+          className="flex items-center gap-2.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg py-1 px-1 transition-colors shrink-0"
           aria-label={`${PRACTICE_CONFIG.practiceName} home`}
         >
           {/* Clinical Emblem */}
-          <div className="w-10 h-10 rounded-xl bg-primary text-white flex items-center justify-center font-bold shadow-xs group-hover:bg-primary-hover transition-colors shrink-0">
+          <div className="w-9 h-9 rounded-lg bg-primary text-white flex items-center justify-center font-bold shadow-xs group-hover:bg-primary-hover transition-colors shrink-0">
             <svg
               className="w-5 h-5 fill-current"
               viewBox="0 0 24 24"
@@ -27,69 +27,47 @@ export const HeaderOrganism: React.FC = () => {
             </svg>
           </div>
 
-          <div className="flex flex-col text-left">
-            <span className="text-xl sm:text-2xl font-extrabold tracking-tight text-primary leading-none group-hover:text-primary-hover transition-colors">
-              {PRACTICE_CONFIG.practiceName}
-            </span>
-            <span className="text-xs font-medium text-muted-foreground mt-1">
-              Mobile & Outreach Dental Care
-            </span>
-          </div>
+          <span className="text-lg sm:text-xl font-extrabold tracking-tight text-primary group-hover:text-primary-hover transition-colors">
+            {PRACTICE_CONFIG.practiceName}
+          </span>
         </a>
 
         {/* Clean, Ordered Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-1 xl:gap-2" aria-label="Main Navigation">
+        <nav className="hidden md:flex items-center gap-1 lg:gap-2" aria-label="Main Navigation">
           {SITE_CONTENT.header.navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-[15px] font-semibold text-foreground/80 hover:text-primary hover:bg-secondary/60 px-3.5 py-2 rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              className="text-sm font-semibold text-foreground/80 hover:text-primary hover:bg-secondary/60 px-3 py-1.5 rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             >
               {link.label}
             </a>
           ))}
         </nav>
 
-        {/* Desktop Direct Call & WhatsApp Action */}
-        <div className="hidden sm:flex items-center gap-4">
-          <a
-            href={`tel:${PRACTICE_CONFIG.phoneRaw}`}
-            className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary-hover px-3 py-2 rounded-lg hover:bg-secondary/40 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-            aria-label={`Call directly at ${PRACTICE_CONFIG.phoneDisplay}`}
-          >
-            <Phone className="w-4 h-4 text-primary shrink-0" aria-hidden="true" />
-            <span>{PRACTICE_CONFIG.phoneDisplay}</span>
-          </a>
-
+        {/* Desktop Right Action: WhatsApp CTA Only (No Mobile Number) */}
+        <div className="hidden sm:flex items-center">
           <WhatsAppCTAButton
             size="sm"
             label="Chat on WhatsApp"
             locationTag="desktop_nav"
-            className="h-11 px-5 text-sm font-semibold shadow-xs"
+            className="h-10 px-4 text-sm font-semibold shadow-xs"
           />
         </div>
 
         {/* Mobile Toggle Button */}
-        <div className="flex items-center gap-2 lg:hidden">
-          <a
-            href={`tel:${PRACTICE_CONFIG.phoneRaw}`}
-            className="sm:hidden w-11 h-11 rounded-xl bg-secondary text-primary flex items-center justify-center border border-border focus-visible:ring-2 focus-visible:ring-primary"
-            aria-label="Call clinic directly"
-          >
-            <Phone className="w-4 h-4 text-primary" aria-hidden="true" />
-          </a>
-
+        <div className="flex items-center sm:hidden">
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="w-11 h-11 rounded-xl bg-secondary text-primary flex items-center justify-center border border-border focus-visible:ring-2 focus-visible:ring-primary"
+            className="w-10 h-10 rounded-lg bg-secondary text-primary flex items-center justify-center border border-border focus-visible:ring-2 focus-visible:ring-primary"
             aria-label="Toggle navigation menu"
             aria-expanded={mobileMenuOpen}
           >
             {mobileMenuOpen ? (
-              <X className="w-6 h-6 text-primary" />
+              <X className="w-5 h-5 text-primary" />
             ) : (
-              <Menu className="w-6 h-6 text-primary" />
+              <Menu className="w-5 h-5 text-primary" />
             )}
           </button>
         </div>
@@ -97,23 +75,7 @@ export const HeaderOrganism: React.FC = () => {
 
       {/* Clean Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-border px-4 pt-3 pb-6 shadow-xl animate-in fade-in slide-in-from-top-2 duration-200">
-          {/* Quick Contact Info */}
-          <div className="p-3.5 rounded-xl bg-secondary/50 border border-border mb-4 text-sm space-y-2">
-            <div className="flex items-center gap-2 text-primary font-semibold">
-              <Phone className="w-4 h-4 shrink-0 text-primary" />
-              <a href={`tel:${PRACTICE_CONFIG.phoneRaw}`} className="hover:underline">
-                {PRACTICE_CONFIG.phoneDisplay}
-              </a>
-            </div>
-            <div className="flex items-center gap-2 text-foreground/80 text-xs">
-              <Mail className="w-4 h-4 shrink-0 text-primary" />
-              <a href={`mailto:${PRACTICE_CONFIG.email}`} className="hover:underline">
-                {PRACTICE_CONFIG.email}
-              </a>
-            </div>
-          </div>
-
+        <div className="md:hidden bg-white border-t border-border px-4 pt-3 pb-6 shadow-xl animate-in fade-in slide-in-from-top-2 duration-200">
           <nav className="flex flex-col space-y-1" aria-label="Mobile Navigation">
             {SITE_CONTENT.header.navLinks.map((link) => (
               <a
@@ -127,12 +89,12 @@ export const HeaderOrganism: React.FC = () => {
             ))}
           </nav>
 
-          <div className="mt-5 pt-4 border-t border-border">
+          <div className="mt-4 pt-4 border-t border-border">
             <WhatsAppCTAButton
               size="default"
               label="Chat on WhatsApp"
               locationTag="mobile_menu"
-              className="w-full text-center h-12 text-base font-semibold"
+              className="w-full text-center h-11 text-base font-semibold"
             />
           </div>
         </div>
@@ -140,4 +102,3 @@ export const HeaderOrganism: React.FC = () => {
     </header>
   );
 };
-
