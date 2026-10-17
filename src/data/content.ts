@@ -59,11 +59,9 @@ export const SITE_CONTENT = {
     tagline: 'Mobile & Community Dental Care',
     navLinks: [
       { label: 'Services', href: '#services' },
-      { label: 'Community Outreach', href: '#outreach' },
+      { label: 'Outreach', href: '#outreach' },
       { label: 'How It Works', href: '#how-it-works' },
-      { label: 'Who We Help', href: '#who-we-help' },
-      { label: 'What We Bring', href: '#what-we-bring' },
-      { label: 'About Us', href: '#about' },
+      { label: 'Safety', href: '#safety' },
       { label: 'FAQ', href: '#faq' },
     ],
   },
