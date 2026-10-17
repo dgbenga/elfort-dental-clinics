@@ -26,208 +26,266 @@ export interface FAQItem {
   answer: string;
 }
 
+export interface OutreachPillar {
+  icon: string;
+  title: string;
+  description: string;
+  benefits: string[];
+}
+
 export const PRACTICE_CONFIG = {
-  dentistName: 'Dr. Sarah Jenkins',
-  credentials: 'BDS (Hons), MFDS RCPS',
-  title: 'Registered Dental Surgeon & Mobile Dental Practitioner',
-  regulatorText: 'General Dental Council (GDC) Reg. 248910 · British Dental Association (BDA)',
-  insuranceText: 'Full Professional Medical Indemnity & Public Liability Covered',
-  phoneDisplay: '07700 900123',
-  phoneRaw: '+447700900123',
-  whatsappRaw: '447700900123',
-  email: 'care@visitingdentist.co.uk',
+  practiceName: 'Elfort Dental Clinics',
+  dentistName: 'Elfort Dental Clinics',
+  credentials: 'BDS, Licensed Dental Surgeons',
+  title: 'Licensed Dental Surgeons & Mobile Oral Healthcare Team',
+  regulatorText: 'Licensed Dental Surgery Practice · Full Clinical Compliance',
+  insuranceText: 'Hospital-Grade Sterilization & Strict Cross-Infection Control',
+  phoneDisplay: '0814 419 9019',
+  phoneRaw: '+2348144199019',
+  whatsappRaw: '2348144199019',
+  email: 'elfortdentalclinics@gmail.com',
   responsePromise: 'Free to ask · No forms · No obligation · We usually reply within 30 minutes',
   hoursDisplay: {
     weekdays: 'Monday – Friday: 8:00 AM – 6:30 PM',
     saturday: 'Saturday: 9:00 AM – 4:00 PM (by appointment)',
-    urgent: 'Evenings & Sundays: Urgent visits by special arrangement',
+    urgent: 'Evenings & Outreaches: By special arrangement',
   },
-  catchmentAreas: ['Bristol', 'Bath', 'South Gloucestershire', 'North Somerset'],
+  catchmentAreas: ['Home Visits', 'Workplaces & Offices', 'Churches & Religious Bodies', 'Community Centers'],
 };
 
 export const SITE_CONTENT = {
   header: {
-    brandText: 'Dr. Sarah Jenkins · Home Dental Care',
+    brandText: 'Elfort Dental Clinics',
+    tagline: 'Mobile & Community Dental Care',
     navLinks: [
+      { label: 'Services', href: '#services' },
+      { label: 'Community Outreach', href: '#outreach' },
       { label: 'How It Works', href: '#how-it-works' },
       { label: 'Who We Help', href: '#who-we-help' },
-      { label: 'Services & Prices', href: '#services' },
-      { label: 'What to Expect', href: '#what-we-bring' },
-      { label: 'About', href: '#about' },
+      { label: 'What We Bring', href: '#what-we-bring' },
+      { label: 'About Us', href: '#about' },
       { label: 'FAQ', href: '#faq' },
     ],
   },
   hero: {
     headline: 'Dental care that comes to you.',
     subheadline:
-      'A friendly, licensed dentist visits your home or workplace for check-ups, cleanings, and simple repairs. Clear prices before we begin, and zero pressure.',
+      'Elfort Dental Clinics brings friendly, licensed dental care directly to your home, workplace, church, or community. Professional check-ups, cleanings, and specialized preventive treatments—with clear prices and zero stress.',
     primaryButtonText: 'Message Us on WhatsApp',
-    secondaryButtonText: 'Prefer to call? 07700 900123',
-    prefilledText: "Hello Dr. Jenkins, I'd like to ask about booking a dental visit at my home.",
+    secondaryButtonText: 'Call: 0814 419 9019',
+    prefilledText: "Hello Elfort Dental Clinics, I'd like to ask about booking a mobile dental visit.",
     trustPoints: [
-      { icon: 'Award', text: 'Fully Licensed Solo Dentist' },
+      { icon: 'Award', text: 'Licensed Dental Surgeons' },
       { icon: 'ShieldCheck', text: 'Sterile, Single-Use Instruments' },
-      { icon: 'Tag', text: 'Clear Price Before We Start' },
+      { icon: 'Tag', text: 'Transparent Upfront Pricing' },
     ],
   },
   howItWorks: {
     title: 'How a home visit works',
-    subtitle: 'Simple, predictable, and arranged entirely around your day.',
+    subtitle: 'Simple, predictable, and arranged entirely around your personal schedule.',
     steps: [
       {
         number: '01',
         title: 'Send us a message',
         description:
-          "Tell us where you are and what you need—whether it's a routine check-up, gentle cleaning, or a specific concern. No lengthy medical forms to fill out.",
+          "Tell us where you are and what you need—whether it's routine scaling, gum care, teeth whitening, or community outreach. No complex forms required.",
       },
       {
         number: '02',
         title: 'Agree a time and clear price',
         description:
-          'We confirm what we can do in your space and give you an exact, upfront price before booking. No surprise bills or hidden travel fees.',
+          'We confirm the treatment plan, answer all questions, and provide a clear, upfront quote before booking. No hidden charges or surprise costs.',
       },
       {
         number: '03',
         title: 'We come to you',
         description:
-          'Your dentist arrives on time with a compact, sterile portable kit. We treat you gently at your own pace, tidy up completely, and leave you in comfort.',
+          'Our dental team arrives on time with compact, hospital-grade portable equipment. We treat you gently at your own pace, tidy up completely, and leave you in comfort.',
       },
     ] as StepItem[],
   },
   whoWeHelp: {
     title: 'Care designed around real lives',
     subtitle:
-      'We visit patients wherever traditional dental clinics feel difficult, stressful, or out of reach.',
+      'We visit patients and organizations wherever traditional dental clinics feel stressful, difficult, or inconvenient.',
     audiences: [
       {
         icon: 'HeartHandshake',
         title: 'Seniors & Family Carers',
         description:
-          'Comfortable, dignified dental care without the struggle of stairs, taxis, or confusing waiting rooms. Family members and carers are always welcome to stay by your side throughout the visit.',
+          'Comfortable, dignified dental care without the struggle of stairs, transport, or waiting rooms. Carers and family are always welcome to stay by their side.',
       },
       {
         icon: 'Briefcase',
-        title: 'Busy Workers & Shift Teams',
+        title: 'Busy Professionals & Corporate Teams',
         description:
-          'Quality check-ups and cleanings that fit around your shifts. We can visit your home on your day off, or come directly to your workplace break room during lunch.',
+          'Quality check-ups and scaling that fit around your working day. We visit your home or set up in your office conference room during break times.',
       },
       {
         icon: 'Smile',
         title: 'Nervous Patients & Avoiders',
         description:
-          'No judgment, no lectures about missed check-ups, and no clinical panic. You are in complete control: we agree on a hand signal, take frequent breaks, and stop the moment you ask.',
+          'No judgment, no lectures, and no clinical panic. You are in complete control: we agree on a hand signal, take frequent pauses, and stop whenever you ask.',
       },
       {
         icon: 'Users',
-        title: 'Parents & Busy Families',
+        title: 'Churches & Community Groups',
         description:
-          'One single appointment for the whole household in the comfort of your own living room. Children feel safe in familiar surroundings, and parents save hours of travel.',
+          'We organize outreach programs partnering with churches, mosques, companies, and community groups to provide free dental consultations and screenings.',
       },
     ] as AudienceItem[],
   },
   services: {
-    title: 'Services and honest prices',
+    title: 'Our Clinical Services & Clear Pricing',
     subtitle:
-      'You will always receive a clear, binding price quote before we start any treatment. No hidden surcharges.',
+      'Delivered with hospital-grade sterilization, modern portable units, and complete price transparency.',
     assuranceNote:
-      'Every patient receives an itemized written receipt. While home visits are private care, we provide the full paperwork needed to claim back from your dental cash plan or private insurer if eligible.',
+      'Every patient receives an itemized written receipt. Clear prices are confirmed before any procedure begins, ensuring complete transparency and peace of mind.',
     items: [
       {
-        id: 'checkup',
-        title: 'Comprehensive Home Check-up',
-        price: 'From £75',
+        id: 'scaling-polishing',
+        title: 'Scaling and Polishing',
+        price: 'Clear Upfront Fee',
         description:
-          'Full oral health examination, soft tissue screening, gum health check, and a plain-English discussion of your teeth.',
+          'Thorough removal of supragingival tartar, plaque, and tough surface stains using gentle ultrasonic and hand instruments, finished with a fresh prophy polish.',
         features: [
-          'Thorough oral examination',
-          'Gentle gum health assessment',
-          'Written personalized care plan',
-          'Free travel within local catchment',
+          'Full ultrasonic scaling & plaque removal',
+          'Removal of stubborn tea, coffee & tobacco stains',
+          'Fresh fluoride dental polish for smooth enamel',
+          'Oral health assessment & hygiene counseling',
         ],
-        buttonText: 'Book a Check-up',
-        prefilledText: "Hello Dr. Jenkins, I'm interested in booking a comprehensive home check-up.",
+        buttonText: 'Book Scaling & Polishing',
+        prefilledText: "Hello Elfort Dental Clinics, I'd like to book a Scaling and Polishing session.",
       },
       {
-        id: 'combo',
-        title: 'Full Check & Polish Combo (Most Popular)',
-        price: 'From £155',
+        id: 'root-planing',
+        title: 'Subgingival Scaling & Root Planing',
+        price: 'Personalized Care Plan',
         description:
-          'Comprehensive clinical examination, gum health check, and full ultrasonic cleaning and stain polish in one comfortable visit.',
+          'Targeted deep periodontal cleaning beneath the gumline to eliminate harmful subgingival calculus, detoxify root surfaces, and arrest bleeding gums.',
         features: [
-          'Complete oral health check-up',
-          'Full ultrasonic scaling & stain removal',
-          'Fresh dental polish & home care advice',
-          'Best value for single-visit care',
+          'Deep pocket debridement below gumline',
+          'Root smoothing to eliminate bacterial toxins',
+          'Stops bleeding gums & active periodontal disease',
+          'Encourages healthy gum reattachment & tissue healing',
         ],
-        buttonText: 'Book Check & Clean Combo',
-        prefilledText: "Hello Dr. Jenkins, I'd like to book the full Check-up & Clean combo visit.",
+        buttonText: 'Inquire About Root Planing',
+        prefilledText: "Hello Elfort Dental Clinics, I'm inquiring about Subgingival Scaling and Root Planing for gum care.",
       },
       {
-        id: 'cleaning',
-        title: 'Gentle Scaling & Cleaning',
-        price: 'From £95',
+        id: 'sealant-fluoride-desensitization',
+        title: 'Fissure Sealant, Fluoride & Desensitization',
+        price: 'Preventive Rate',
         description:
-          'Careful removal of plaque and tartar buildup using gentle portable ultrasonic and hand instruments, followed by a fresh polish.',
+          'Tri-action preventive therapy: sealing deep cavity-prone grooves, professional fluoride enamel strengthening, and rapid desensitization for sensitive teeth.',
         features: [
-          'Plaque & tartar removal',
-          'Stain removal and polish',
-          'Sensitive-friendly technique',
-          'Tailored home care advice',
+          'Resin fissure sealant for deep cavity-prone grooves',
+          'Professional topical fluoride varnish application',
+          'Instant relief from cold, hot, or sweet sensitivity',
+          '100% painless, non-invasive preventive therapy',
         ],
-        buttonText: 'Book a Cleaning',
-        prefilledText: "Hello Dr. Jenkins, I'd like to ask about arranging a gentle scale and clean at home.",
+        buttonText: 'Book Preventive Care',
+        prefilledText: "Hello Elfort Dental Clinics, I need Fissure Sealant, Fluoride treatment, or tooth desensitization.",
       },
       {
-        id: 'repairs',
-        title: 'Simple Repairs & Pain Relief',
-        price: 'From £120',
+        id: 'whitening',
+        title: 'Professional Teeth Whitening',
+        price: 'Cosmetic Rate',
         description:
-          'Temporary fillings, recementing loose crowns or bridges, smoothing sharp chips, and immediate relief for aching teeth.',
+          'Dentist-supervised cosmetic whitening treatment formulated to safely lift deep discoloration, surface stains, and restore a bright, radiant smile.',
         features: [
-          'Urgent pain relief assessment',
-          'Recementing loose crowns',
-          'Smooth chipped enamel edges',
-          'Temporary protective fillings',
+          'Dentist-formulated, enamel-safe whitening gel',
+          'Lifts deep stains from coffee, tea, and aging',
+          'Noticeable shade lightening in a single session',
+          'Custom gum protection and home care advice',
         ],
-        buttonText: 'Ask About a Repair',
-        prefilledText: "Hello Dr. Jenkins, I have a chipped tooth/loose crown and need advice on a home repair.",
+        buttonText: 'Book Teeth Whitening',
+        prefilledText: "Hello Elfort Dental Clinics, I'd like to book an appointment for Professional Teeth Whitening.",
       },
       {
-        id: 'family',
-        title: 'Family & Multi-Patient Visit',
-        price: 'Special Combined Rate',
+        id: 'counseling',
+        title: 'Oral Hygiene Counseling & Education',
+        price: 'Included With Visits',
         description:
-          'Convenient combined visits for households or care home residents, reducing per-person costs in a single relaxed session.',
+          'One-on-one personalized prevention counseling, hands-on brushing and flossing technique coaching, dietary guidance, and custom maintenance plans.',
         features: [
-          'Single convenient visit window',
-          'Examination for 2+ family members',
-          'Gentle introduction for young kids',
-          'Discounted group travel rate',
+          'Personalized brushing & interdental flossing coaching',
+          'Dietary counseling for cavity and acid erosion prevention',
+          'Tailored home maintenance routine for all ages',
+          'Guidance on caring for children or eldercare oral health',
         ],
-        buttonText: 'Inquire for Family',
-        prefilledText: "Hello Dr. Jenkins, I'd like to inquire about booking a combined home visit for my household.",
+        buttonText: 'Inquire About Counseling',
+        prefilledText: "Hello Elfort Dental Clinics, I'd like to consult on Oral Hygiene Counseling and home care.",
       },
     ] as ServiceItem[],
+  },
+  outreach: {
+    title: 'Community Outreaches & Institutional Partnerships',
+    subtitle:
+      'We partner with churches, corporations, community groups, and NGOs to provide free dental examinations and oral health consultations.',
+    description:
+      'At Elfort Dental Clinics, we believe quality oral healthcare should be accessible to everyone. We regularly organize community outreaches and partner with religious organizations, businesses, and civic groups to screen, educate, and empower communities toward healthier smiles.',
+    pillars: [
+      {
+        icon: 'Church',
+        title: 'Churches & Religious Bodies',
+        description:
+          'We collaborate with churches, mosques, and faith fellowships to organize weekend dental outreach days, providing free oral screenings and health talks to congregations.',
+        benefits: [
+          'Free oral examinations & consultation',
+          'Educational dental talk during fellowship',
+          'Personalized oral hygiene recommendations',
+          'Subsidized follow-up treatment plans',
+        ],
+      },
+      {
+        icon: 'Building2',
+        title: 'Corporate & Workplace Wellness',
+        description:
+          'Partner with us for corporate wellness days. We bring dental check-ups directly to your office, saving employee hours and promoting workplace health.',
+        benefits: [
+          'On-site examinations in a quiet meeting room',
+          'Zero commute or lost work hours for staff',
+          'Lunch-and-learn oral hygiene seminars',
+          'Group corporate dental health packages',
+        ],
+      },
+      {
+        icon: 'Users2',
+        title: 'Community Groups & NGOs',
+        description:
+          'We team up with community leaders, charitable NGOs, and youth/elderly associations to conduct impactful public oral health missions.',
+        benefits: [
+          'Large-scale public dental screening drives',
+          'Free consultations and dental hygiene kits',
+          'Care home and vulnerable population visits',
+          'Comprehensive outreach coordination',
+        ],
+      },
+    ] as OutreachPillar[],
+    ctaText: 'Partner With Us for an Outreach',
+    prefilledText:
+      'Hello Elfort Dental Clinics, I would like to discuss organizing a community or corporate dental outreach with our organization/church.',
   },
   equipment: {
     title: 'What we bring, and what you provide',
     subtitle:
       'We arrive self-sufficient with portable medical equipment. Setting up takes under 10 minutes.',
     weBring: {
-      title: 'What We Bring (100% Self-Contained)',
+      title: 'What Elfort Dental Brings (100% Self-Contained)',
       items: [
         'Hospital-grade sterile instruments in vacuum-sealed surgical pouches (unsealed in front of you)',
         'High-intensity medical LED headlamp and clinical dental loupes for precision vision',
-        'Compact, whisper-quiet mobile dental unit with suction and polishing handpiece',
+        'Compact, whisper-quiet mobile dental unit with suction, scaler, and polishing handpiece',
         'Disposable protective coverings for your furniture and treatment area',
         'Clinical sharps container and safe medical waste disposal bags',
       ],
     },
     youProvide: {
-      title: 'All You Need in Your Home',
+      title: 'All You Need in Your Home or Venue',
       items: [
-        'A comfortable armchair, recliner, sofa, or bed where the patient can lean back comfortably',
-        'Access to one standard household electrical plug socket',
+        'A comfortable armchair, recliner, sofa, or desk chair where the patient can lean back comfortably',
+        'Access to one standard household or office electrical plug socket',
         'Adequate room lighting (a window or standard ceiling light)',
         'A small clear table, desk, or countertop for our sterile instrument tray',
       ],
@@ -238,15 +296,15 @@ export const SITE_CONTENT = {
     subtitle:
       'Your safety always comes first. If a procedure requires a hospital clinic, we tell you immediately.',
     canDo: {
-      title: 'Safe & Effective in Your Home',
+      title: 'Safe & Effective in Your Home or Workplace',
       items: [
-        'Routine check-ups, oral cancer screening & gum assessments',
-        'Gentle plaque, tartar, and stain cleaning and polishing',
-        'Temporary fillings and minor composite repairs',
-        'Recementing dislodged crowns and loose dental bridges',
-        'Smoothing rough, broken, or cutting enamel edges',
-        'Denture checks, pressure relief adjustments, and soft relines',
-        'Prescriptions for acute dental infections and urgent toothache management',
+        'Scaling and polishing for healthy gums and clean teeth',
+        'Subgingival scaling and root planing for gum disease',
+        'Fissure sealant, topical fluoride & tooth desensitization',
+        'Professional teeth whitening treatments',
+        'Comprehensive oral health examinations & cancer screening',
+        'Oral hygiene counseling and personalized home care coaching',
+        'Temporary protective fillings and pain relief consultations',
       ],
     },
     cannotDo: {
@@ -256,10 +314,10 @@ export const SITE_CONTENT = {
         'Full root canal therapy requiring specialized radiographic equipment',
         'General anesthesia or intravenous conscious sedation',
         'Surgical dental implant placement and bone grafting',
-        'Extensive multi-unit cosmetic veneers or laboratory crowns',
+        'Extensive multi-unit laboratory crowns and surgical bridges',
       ],
       referralNote:
-        'If our initial examination shows that your tooth needs a specialized surgery or hospital setting, we will explain exactly why, provide immediate pain relief, and help coordinate a direct referral to a trusted local clinic.',
+        'If our initial examination shows that your tooth needs a specialized surgery or hospital setting, we will explain exactly why, provide immediate pain relief, and help coordinate a direct referral to a trusted clinic.',
     },
   },
   promise: {
@@ -279,92 +337,92 @@ export const SITE_CONTENT = {
       {
         icon: 'Stethoscope',
         title: 'Complete Honesty on Limits',
-        body: 'If a tooth cannot be safely or permanently repaired in your home, we say so immediately. We relieve your immediate pain and help guide you to the right clinic.',
+        body: 'If a tooth cannot be safely or permanently treated in your home, we say so immediately. We relieve your immediate pain and help guide you to the right clinic.',
       },
     ],
   },
   about: {
-    title: 'Meet your visiting dentist',
+    title: 'Meet Elfort Dental Clinics',
     bioParagraph1:
-      'After more than twelve years practicing in busy traditional dental surgeries, I realized that the people who need dental care the most are often the ones who find it hardest to reach a clinic—busy shift workers who cannot lose half a day, elderly grandparents with mobility limits, and patients paralyzed by dental anxiety.',
+      'Elfort Dental Clinics was founded on a simple, compassionate conviction: dental care should be accessible, humane, and free of the intimidating barriers of traditional clinics. Too many families, shift workers, and frail elders suffer in silence because visiting a surgery is physically daunting or incompatible with their schedules.',
     bioParagraph2:
-      'I founded this home-visit practice to bring unhurried, gentle, one-on-one dentistry back to where patients feel safest: in their own homes. When you book a visit, you deal with me personally from the very first WhatsApp message to your treatment and follow-up.',
-    ctaButtonText: 'Message Dr. Jenkins on WhatsApp',
-    prefilledText: 'Hello Dr. Jenkins, I read your background and would love to ask a quick question.',
+      'Whether we are visiting an individual in their private living room, conducting a corporate wellness check for an office team, or partnering with a church for a free community outreach, our team delivers unhurried, gentle, and hospital-grade dental care with personal warmth and total transparency.',
+    ctaButtonText: 'Message Elfort Dental on WhatsApp',
+    prefilledText: 'Hello Elfort Dental Clinics, I would love to learn more about your services and book an appointment.',
   },
   faq: {
     title: 'Frequently asked questions',
-    subtitle: 'Everything you need to know about welcoming a dentist into your home.',
+    subtitle: 'Everything you need to know about our mobile visits and community outreaches.',
     items: [
       {
         id: 'faq-1',
         question: 'Is dental care at home really safe and hygienic?',
         answer:
-          'Yes, absolutely. We follow the exact same cross-infection control protocols as a premier dental hospital. All instruments are pre-sterilized under high pressure in hospital-grade autoclaves, vacuum-sealed in single-use pouches, and opened directly in front of you. All disposable items are packaged in clinical waste bags and removed immediately after your appointment.',
+          'Yes, absolutely. We follow the exact same cross-infection control protocols as premier dental hospitals. All instruments are pre-sterilized under high pressure in autoclaves, vacuum-sealed in single-use surgical pouches, and opened directly in front of you. All disposables are removed in clinical waste bags immediately after treatment.',
       },
       {
         id: 'faq-2',
-        question: 'What if I feel nervous or need to stop during treatment?',
+        question: 'How do community and church outreaches work?',
         answer:
-          'You are in complete control of the visit. Before we begin, we agree on a simple hand signal. If you need to swallow, take a breath, ask a question, or pause for any reason, you simply raise your hand and we stop instantly. We never rush.',
+          'We partner with churches, companies, and community organizations to host dental health days. Our team provides free dental examinations, oral cancer screenings, and one-on-one oral hygiene counseling for attendees. We can tailor the outreach to your venue size and schedule.',
       },
       {
         id: 'faq-3',
-        question: 'How does payment work, and will dental insurance cover it?',
+        question: 'What is subgingival scaling and root planing?',
         answer:
-          'We confirm our fees in writing before we start your visit. Payment is collected at the end of the appointment via a secure mobile card terminal or direct bank transfer. While we do not process direct insurer billing, we provide an itemized official receipt with all clinical codes, which most dental cash plans and private health policies accept for reimbursement.',
+          'It is a specialized deep cleaning procedure for patients with gum disease, tartar beneath the gumline, or bleeding gums. We gently remove hardened bacterial calculus from root surfaces, allowing the gum tissue to heal and firmly reattach to the tooth.',
       },
       {
         id: 'faq-4',
-        question: 'Can you visit my workplace or office?',
+        question: 'What are fissure sealants and fluoride applications?',
         answer:
-          'Yes. Many of our patients are shift workers, busy professionals, or corporate teams. As long as you have a private room (such as a meeting room, first-aid room, or quiet office) with a chair and an electrical socket, we can provide routine check-ups and cleanings during your lunch break.',
+          'Fissure sealants are thin, protective coatings applied to the deep chewing grooves of back teeth to shield them from food and decay. Fluoride applications strengthen tooth enamel and resist acid attacks, while our desensitization treatment provides rapid relief for painful cold or sweet tooth sensitivity.',
       },
       {
         id: 'faq-5',
-        question: 'What if my elderly parent has dementia or cannot speak well?',
+        question: 'Can you visit my workplace or company office?',
         answer:
-          "We specialize in compassionate care for patients with cognitive decline and physical challenges. We take our time, speak in calm, gentle tones, and work at the patient's pace. We encourage family members or trusted carers to sit right beside them throughout the appointment.",
+          'Yes! Many of our patients are busy executives and corporate teams. With access to a quiet room or meeting space with a standard plug socket, we can provide scaling, polishing, and consultations during lunch breaks or corporate health days.',
       },
       {
         id: 'faq-6',
-        question: 'What happens if I have an emergency or severe swelling?',
+        question: 'What happens if a tooth needs a surgical clinic procedure?',
         answer:
-          'If you have severe swelling spreading to your eye or throat, difficulty swallowing, difficulty breathing, or uncontrolled bleeding after trauma, you should attend your nearest hospital Accident & Emergency (A&E) immediately. For persistent toothaches or lost fillings, send us a WhatsApp message and we will advise on pain relief and book the earliest home visit slot.',
+          'We believe in radical honesty. If our examination reveals a tooth requires a complex surgical extraction, root canal therapy, or hospital care, we will explain the situation clearly, prescribe relief if necessary, and connect you with trusted clinic partners.',
       },
       {
         id: 'faq-7',
-        question: 'How much space do you need in my house?',
+        question: 'How do I contact or book with Elfort Dental Clinics?',
         answer:
-          'Very little. Our entire clinical setup is packed into two lightweight portable cases. All we need is enough floor space for your dentist to stand or sit beside your armchair, and a small clean table or tray nearby for our instruments.',
+          'You can message us directly on WhatsApp at 0814 419 9019, call our phone line at 0814 419 9019, or email us at elfortdentalclinics@gmail.com. We usually respond within 30 minutes during working hours.',
       },
     ] as FAQItem[],
   },
   areaAndHours: {
-    title: 'Service area and availability',
-    subtitle: 'Providing dependable home visits across the local community.',
-    catchmentTitle: 'Catchment Area',
+    title: 'Service area, outreaches and availability',
+    subtitle: 'Providing mobile dental visits and community outreaches.',
+    catchmentTitle: 'Where We Operate',
     catchmentText:
-      'We provide regular home and workplace visits across Bristol, Bath, South Gloucestershire, and North Somerset.',
+      'Elfort Dental Clinics provides mobile dental care to private residences, corporate offices, churches, and community venues across our catchment perimeter.',
     travelNote:
-      'Visits within our primary 10-mile radius include zero travel surcharges. For visits outside this perimeter, a modest travel fee is agreed upfront before booking.',
-    emergencyTitle: 'Urgent Care & Emergency Guidance',
+      'Standard local visits include clear, upfront pricing agreed before we travel. For group outreaches and community events, custom logistic arrangements are coordinated with your leadership team.',
+    emergencyTitle: 'Urgent Care & Severe Emergencies',
     emergencyText:
-      'For life-threatening dental emergencies, facial trauma, or airway swelling, please call 999 or attend your nearest Emergency Department immediately.',
+      'For severe facial trauma, airway swelling, or uncontrolled bleeding, please seek immediate emergency hospital medical attention. For toothaches or urgent scaling, message us on WhatsApp for rapid scheduling.',
   },
   finalCTA: {
-    title: 'Ready for dental care that comes to you?',
+    title: 'Ready for gentle dental care that comes to you?',
     subtitle:
-      "Send us a quick WhatsApp message. Tell us what you need and where you are, and we'll reply promptly with times and clear pricing.",
-    buttonText: 'Message Us on WhatsApp',
-    prefilledText: "Hello Dr. Jenkins, I'd like to find out about your next available home visit slots.",
-    phonePrompt: 'Prefer to speak with us first? Call Dr. Jenkins directly at',
-    microCopy: 'No pressure · Free advice · Clear prices before we start',
+      "Send Elfort Dental Clinics a quick WhatsApp message or give us a call. Whether you need a personal home visit or want to organize a community outreach, we're ready to help.",
+    buttonText: 'Message on WhatsApp',
+    prefilledText: "Hello Elfort Dental Clinics, I'd like to book an appointment or discuss a visit.",
+    phonePrompt: 'Prefer to call us directly?',
+    microCopy: 'No pressure · Clear prices · Dedicated mobile & community team',
   },
   footer: {
     disclaimer:
-      'Information on this website is for general guidance and does not replace in-person clinical diagnosis. Home treatment is subject to clinical suitability assessed at the time of examination.',
+      'Information on this website is for general guidance and does not replace in-person clinical diagnosis. Home and outreach treatments are subject to clinical examination and suitability.',
     privacyNote:
-      'Your privacy is strictly respected. Messages sent via WhatsApp and clinical records are kept in strict compliance with healthcare data protection standards.',
+      'Patient privacy is strictly protected. Communications and medical consultations comply with professional healthcare confidentiality standards.',
   },
 };

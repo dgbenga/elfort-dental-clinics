@@ -1,9 +1,10 @@
 import React from 'react';
 import { HeaderOrganism } from '@/components/organisms/HeaderOrganism';
 import { HeroOrganism } from '@/components/organisms/HeroOrganism';
+import { ServicesPricingOrganism } from '@/components/organisms/ServicesPricingOrganism';
+import { CommunityOutreachOrganism } from '@/components/organisms/CommunityOutreachOrganism';
 import { HowItWorksOrganism } from '@/components/organisms/HowItWorksOrganism';
 import { WhoWeHelpOrganism } from '@/components/organisms/WhoWeHelpOrganism';
-import { ServicesPricingOrganism } from '@/components/organisms/ServicesPricingOrganism';
 import { EquipmentSafetyOrganism } from '@/components/organisms/EquipmentSafetyOrganism';
 import { ScopeBoundariesOrganism } from '@/components/organisms/ScopeBoundariesOrganism';
 import { TrustPromiseOrganism } from '@/components/organisms/TrustPromiseOrganism';
@@ -18,12 +19,12 @@ export const App: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen selection:bg-sky-deep selection:text-navy">
       <HeaderOrganism />
-      {/* pb-24 on mobile ensures floating WhatsApp dock never occludes content */}
       <main className="flex-1 pb-20 md:pb-0">
         <HeroOrganism />
+        <ServicesPricingOrganism />
+        <CommunityOutreachOrganism />
         <HowItWorksOrganism />
         <WhoWeHelpOrganism />
-        <ServicesPricingOrganism />
         <EquipmentSafetyOrganism />
         <ScopeBoundariesOrganism />
         <TrustPromiseOrganism />

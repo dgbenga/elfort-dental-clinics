@@ -83,7 +83,7 @@ export const HeroOrganism: React.FC = () => {
                   </div>
                 </div>
                 <div className="px-3 py-1 rounded-full bg-sky-main text-primary text-xs font-semibold border border-sky-line/80">
-                  GDC Reg. 248910
+                  Licensed Dental Surgery
                 </div>
               </div>
 

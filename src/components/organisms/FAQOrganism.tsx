@@ -35,7 +35,7 @@ export const FAQOrganism: React.FC = () => {
           </p>
           <WhatsAppCTAButton
             label="Ask a Question on WhatsApp"
-            prefilledText="Hello Dr. Jenkins, I have a question about whether a home visit is right for my situation."
+            prefilledText="Hello Elfort Dental Clinics, I have a question about whether a home visit or outreach is right for my situation."
             locationTag="faq_cta"
             className="w-full sm:w-auto"
           />

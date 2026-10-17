@@ -21,10 +21,10 @@ ReactDOM.createRoot(rootElement).render(
           <div className="max-w-md bg-white p-8 rounded-2xl border border-sky-line shadow-clinical">
             <h1 className="text-2xl font-bold text-primary mb-3">Something went wrong</h1>
             <p className="text-foreground text-lg mb-6 leading-relaxed">
-              We encountered a minor issue loading this page. Please refresh or message Dr. Jenkins directly on WhatsApp.
+              We encountered a minor issue loading this page. Please refresh or message Elfort Dental Clinics directly on WhatsApp.
             </p>
             <a
-              href="https://wa.me/447700900123"
+              href="https://wa.me/2348144199019"
               className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-primary text-white font-semibold text-lg hover:bg-primary-hover"
             >
               Message Us on WhatsApp

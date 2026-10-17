@@ -16,7 +16,7 @@ export const FloatingWhatsAppCTAOrganism: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 flex items-center justify-center gap-3 h-[52px] px-4 font-bold text-lg text-white active:scale-[0.98] transition-transform"
-          aria-label="Message Dr. Jenkins on WhatsApp (opens in new tab)"
+          aria-label="Message Elfort Dental Clinics on WhatsApp (opens in new tab)"
         >
           {/* White monochrome WhatsApp icon */}
           <svg
