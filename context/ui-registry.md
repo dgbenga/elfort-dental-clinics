@@ -91,12 +91,12 @@
 ### [ORGANISM]: HeaderOrganism
 - **Filepath**: `src/components/organisms/HeaderOrganism.tsx`
 - **Atomic Tier**: `Organism`
-- **Underlying Primitives**: Semantic `<header>`, `<nav>`, desktop top utility contact bar, brand emblem, desktop nav links, `PhoneCallButton`, `WhatsAppCTAButton`, Radix Sheet mobile drawer.
+- **Underlying Primitives**: Semantic `<header>`, `<nav>`, clinical emblem, ordered desktop nav links, inline direct dial link, `WhatsAppCTAButton`, clean mobile drawer.
 - **Tokens Consumed**:
-  - Top Utility Bar: `bg-primary`, `text-primary-foreground`
-  - Main Bar: `bg-background/95 backdrop-blur-md`, `border-border`
-  - Contact details: `elfortdentalclinics@gmail.com`, `0814 419 9019`
-- **Accessibility**: Skip link target ready, `aria-expanded` on mobile hamburger toggle, keyboard navigable.
+  - Main Bar: `bg-card/95 backdrop-blur-md`, `border-border`
+  - Typography: `text-primary`, `text-foreground/80`
+  - Contact details: `0814 419 9019` inline, `elfortdentalclinics@gmail.com` in mobile drawer
+- **Accessibility**: Skip link ready, `aria-expanded` on mobile hamburger toggle, keyboard navigable focus rings.
 
 ### [ORGANISM]: HeroOrganism
 - **Filepath**: `src/components/organisms/HeroOrganism.tsx`
