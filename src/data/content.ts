@@ -148,6 +148,21 @@ export const SITE_CONTENT = {
         prefilledText: "Hello Dr. Jenkins, I'm interested in booking a comprehensive home check-up.",
       },
       {
+        id: 'combo',
+        title: 'Full Check & Polish Combo (Most Popular)',
+        price: 'From £155',
+        description:
+          'Comprehensive clinical examination, gum health check, and full ultrasonic cleaning and stain polish in one comfortable visit.',
+        features: [
+          'Complete oral health check-up',
+          'Full ultrasonic scaling & stain removal',
+          'Fresh dental polish & home care advice',
+          'Best value for single-visit care',
+        ],
+        buttonText: 'Book Check & Clean Combo',
+        prefilledText: "Hello Dr. Jenkins, I'd like to book the full Check-up & Clean combo visit.",
+      },
+      {
         id: 'cleaning',
         title: 'Gentle Scaling & Cleaning',
         price: 'From £95',

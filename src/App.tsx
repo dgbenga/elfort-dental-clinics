@@ -18,7 +18,8 @@ export const App: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen selection:bg-sky-deep selection:text-navy">
       <HeaderOrganism />
-      <main className="flex-1">
+      {/* pb-24 on mobile ensures floating WhatsApp dock never occludes content */}
+      <main className="flex-1 pb-20 md:pb-0">
         <HeroOrganism />
         <HowItWorksOrganism />
         <WhoWeHelpOrganism />

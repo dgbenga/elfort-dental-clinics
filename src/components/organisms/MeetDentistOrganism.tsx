@@ -8,19 +8,19 @@ import { SITE_CONTENT, PRACTICE_CONFIG } from '@/data/content';
 
 export const MeetDentistOrganism: React.FC = () => {
   return (
-    <section id="about" className="py-20 sm:py-24 bg-white border-b border-sky-line/50">
+    <section id="about" className="py-14 sm:py-20 bg-white border-b border-sky-line/50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Left Column: Visual Profile Card */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          {/* Left Column: Visual Profile Card (5 cols) */}
           <div className="lg:col-span-5">
             <CardAtom
               variant="default"
               className="p-8 bg-sky-main/30 border-2 border-sky-line text-center relative overflow-hidden"
             >
-              {/* Doctor Avatar / Visual Illustration Placeholder */}
-              <div className="w-36 h-36 mx-auto mb-6 rounded-3xl bg-white border-2 border-sky-line flex items-center justify-center shadow-clinical text-primary">
+              {/* Doctor Avatar / Visual Illustration */}
+              <div className="w-32 h-32 mx-auto mb-5 rounded-3xl bg-white border-2 border-sky-line flex items-center justify-center shadow-clinical text-primary">
                 <svg
-                  className="w-20 h-20 fill-current opacity-90"
+                  className="w-16 h-16 fill-current opacity-90"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
                 >
@@ -31,14 +31,14 @@ export const MeetDentistOrganism: React.FC = () => {
               <span className="text-2xl font-bold text-primary block leading-tight">
                 {PRACTICE_CONFIG.dentistName}
               </span>
-              <span className="text-base font-semibold text-foreground block mb-2">
+              <span className="text-base font-semibold text-foreground block mb-1">
                 {PRACTICE_CONFIG.credentials}
               </span>
-              <span className="text-sm text-ink-muted block mb-6">
+              <span className="text-sm text-ink-muted block mb-5">
                 {PRACTICE_CONFIG.title}
               </span>
 
-              {/* Verified Credentials Pills / Box */}
+              {/* Verified Credentials Box */}
               <div className="p-4 rounded-xl bg-white border border-sky-line text-left space-y-2 text-sm text-foreground">
                 <div className="flex items-center gap-2">
                   <Award className="w-4 h-4 text-primary shrink-0" aria-hidden="true" />
@@ -56,7 +56,7 @@ export const MeetDentistOrganism: React.FC = () => {
             </CardAtom>
           </div>
 
-          {/* Right Column: Bio Story & Practice Philosophy */}
+          {/* Right Column: Bio Story & Practice Philosophy (7 cols) */}
           <div className="lg:col-span-7">
             <HeadingAtom level={2} className="text-3xl sm:text-4xl mb-6">
               {SITE_CONTENT.about.title}

@@ -6,7 +6,7 @@ import { SITE_CONTENT, PRACTICE_CONFIG } from '@/data/content';
 
 export const FinalCTABandOrganism: React.FC = () => {
   return (
-    <section className="py-20 sm:py-24 bg-primary text-white border-b border-navy-hover">
+    <section className="py-16 sm:py-20 bg-primary text-white border-b border-navy-hover">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <HeadingAtom
           level={2}

@@ -6,9 +6,9 @@ import { SITE_CONTENT } from '@/data/content';
 
 export const EquipmentSafetyOrganism: React.FC = () => {
   return (
-    <section id="what-we-bring" className="py-20 sm:py-24 bg-sky-main/40 border-b border-sky-line/50">
+    <section id="what-we-bring" className="py-14 sm:py-20 bg-sky-main/40 border-b border-sky-line/50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl mb-12 sm:mb-16">
+        <div className="max-w-2xl mb-10 sm:mb-14">
           <HeadingAtom level={2} className="text-3xl sm:text-4xl mb-4">
             {SITE_CONTENT.equipment.title}
           </HeadingAtom>

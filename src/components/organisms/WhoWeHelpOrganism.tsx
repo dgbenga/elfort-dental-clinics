@@ -5,9 +5,9 @@ import { SITE_CONTENT } from '@/data/content';
 
 export const WhoWeHelpOrganism: React.FC = () => {
   return (
-    <section id="who-we-help" className="py-20 sm:py-24 bg-sky-main/40 border-b border-sky-line/50">
+    <section id="who-we-help" className="py-14 sm:py-20 bg-sky-main/40 border-b border-sky-line/50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl mb-12 sm:mb-16">
+        <div className="max-w-2xl mb-10 sm:mb-14">
           <HeadingAtom level={2} className="text-3xl sm:text-4xl mb-4">
             {SITE_CONTENT.whoWeHelp.title}
           </HeadingAtom>
@@ -16,7 +16,8 @@ export const WhoWeHelpOrganism: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* 2x2 Grid for Audience Cards (Balanced 16:10 aspect ratio instead of narrow vertical pillars) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {SITE_CONTENT.whoWeHelp.audiences.map((audience, idx) => (
             <AudienceCardMolecule key={idx} audience={audience} />
           ))}

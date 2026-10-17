@@ -7,9 +7,9 @@ import { SITE_CONTENT } from '@/data/content';
 
 export const FAQOrganism: React.FC = () => {
   return (
-    <section id="faq" className="py-20 sm:py-24 bg-sky-main/40 border-b border-sky-line/50">
+    <section id="faq" className="py-14 sm:py-20 bg-sky-main/40 border-b border-sky-line/50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
           <HeadingAtom level={2} className="text-3xl sm:text-4xl mb-4">
             {SITE_CONTENT.faq.title}
           </HeadingAtom>
@@ -26,7 +26,7 @@ export const FAQOrganism: React.FC = () => {
         </Accordion.Root>
 
         {/* Have another question? Banner */}
-        <div className="mt-12 p-8 rounded-2xl bg-white border border-sky-line shadow-clinical text-center max-w-2xl mx-auto">
+        <div className="mt-10 p-8 rounded-2xl bg-white border border-sky-line shadow-clinical text-center max-w-2xl mx-auto">
           <span className="text-xl font-bold text-primary block mb-2">
             Have a specific question about your home or loved one?
           </span>
