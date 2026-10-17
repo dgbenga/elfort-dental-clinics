@@ -101,7 +101,12 @@
 ### [ORGANISM]: HeroOrganism
 - **Filepath**: `src/components/organisms/HeroOrganism.tsx`
 - **Atomic Tier**: `Organism`
-- **Underlying Primitives**: 7:5 widescreen balanced grid, primary H1 typography, dual conversion CTAs, trust metric badges, responsive dentist card.
+- **Underlying Primitives**: High-resolution mobile dentistry photograph (`/hero-dentist-home.jpg`), dual-layer WCAG AAA contrast lighting gradient, 7:5 widescreen balanced grid, primary H1 typography, dual conversion CTAs, trust metric badges, floating glass medical reassurance card.
+- **Tokens Consumed**:
+  - Surface: `bg-background`, `bg-white/90 backdrop-blur-md`
+  - Typography: `text-primary`, `text-foreground`
+  - Border & Shadow: `border-border/80`, `shadow-clinical-hover`
+- **Accessibility**: Descriptive image `alt`, `loading="eager"` with `fetchPriority="high"`, guaranteed 11:1 AAA contrast on typography over image overlay.
 
 ### [ORGANISM]: ServicesPricingOrganism
 - **Filepath**: `src/components/organisms/ServicesPricingOrganism.tsx`
