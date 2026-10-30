@@ -58,10 +58,14 @@ export const HeroOrganism: React.FC = () => {
               />
             </div>
 
-            {/* Micro Assurance Copy */}
-            <p className="text-sm text-muted-foreground mb-8">
-              {PRACTICE_CONFIG.responsePromise}
-            </p>
+            {/* Micro Assurance Copy with Live Availability Pulse */}
+            <div className="flex items-center gap-2 mb-8 text-sm text-muted-foreground">
+              <span className="relative flex h-2 w-2 shrink-0">
+                <span className="motion-safe:animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600" />
+              </span>
+              <span>{PRACTICE_CONFIG.responsePromise}</span>
+            </div>
 
             {/* Trust Proof Badges (Inline below buttons) */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-5 border-t border-border/80">

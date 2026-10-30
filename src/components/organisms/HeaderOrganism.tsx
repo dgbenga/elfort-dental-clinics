@@ -1,13 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { WhatsAppCTAButton } from '@/components/molecules/WhatsAppCTAButton';
 import { SITE_CONTENT, PRACTICE_CONFIG } from '@/data/content';
 
 export const HeaderOrganism: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (totalHeight > 0) {
+        const current = (window.scrollY / totalHeight) * 100;
+        setScrollProgress(Math.min(100, Math.max(0, current)));
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-border shadow-xs">
+    <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-border shadow-xs relative">
+      {/* Scroll Reading Progress Bar */}
+      <div
+        className="absolute bottom-0 left-0 h-[2.5px] bg-primary transition-all duration-75 ease-out z-10"
+        style={{ width: `${scrollProgress}%` }}
+        role="progressbar"
+        aria-valuenow={Math.round(scrollProgress)}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-label="Reading progress"
+      />
+
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
         {/* Brand Identity - Perfectly Aligned */}
         <a
@@ -45,8 +69,16 @@ export const HeaderOrganism: React.FC = () => {
           ))}
         </nav>
 
-        {/* Desktop Right Action: WhatsApp CTA Only (No Mobile Number) */}
-        <div className="hidden sm:flex items-center">
+        {/* Desktop Right Action: Live Beacon & WhatsApp CTA */}
+        <div className="hidden sm:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-main text-primary text-xs font-semibold border border-sky-line">
+            <span className="relative flex h-2 w-2">
+              <span className="motion-safe:animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600" />
+            </span>
+            <span>Online · Available This Week</span>
+          </div>
+
           <WhatsAppCTAButton
             size="sm"
             label="Chat on WhatsApp"
@@ -89,7 +121,14 @@ export const HeaderOrganism: React.FC = () => {
             ))}
           </nav>
 
-          <div className="mt-4 pt-4 border-t border-border">
+          <div className="mt-4 pt-4 border-t border-border space-y-3">
+            <div className="flex items-center justify-center gap-2 py-1 text-xs font-medium text-ink-muted">
+              <span className="relative flex h-2 w-2">
+                <span className="motion-safe:animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600" />
+              </span>
+              <span>Online · Available for visits this week</span>
+            </div>
             <WhatsAppCTAButton
               size="default"
               label="Chat on WhatsApp"

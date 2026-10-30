@@ -97,17 +97,19 @@
 ### [ORGANISM]: HeaderOrganism
 - **Filepath**: `src/components/organisms/HeaderOrganism.tsx`
 - **Atomic Tier**: `Organism`
-- **Underlying Primitives**: Semantic `<header>`, `<nav>`, clinical emblem on single baseline, sleek `h-16` bar, ordered desktop nav links, `WhatsAppCTAButton`, clean mobile drawer.
+- **Underlying Primitives**: Semantic `<header>`, `<nav>`, clinical emblem on single baseline, sleek `h-16` bar, scroll reading progress bar (`2.5px`), live availability beacon (`motion-safe:animate-ping`), ordered desktop nav links, `WhatsAppCTAButton`, clean mobile drawer.
 - **Tokens Consumed**:
   - Main Bar: `bg-card/95 backdrop-blur-md`, `border-border`, height `h-16` (64px)
   - Typography: `text-primary`, `text-foreground/80`
+  - Live Beacon: `bg-sky-main text-primary border-sky-line`
+  - Progress Bar: `bg-primary`
   - Conversion: Primary `WhatsAppCTAButton` only
-- **Accessibility**: Skip link ready, `aria-expanded` on mobile hamburger toggle, keyboard navigable focus rings.
+- **Accessibility**: Skip link ready, `role="progressbar"` on reading indicator, `aria-expanded` on mobile hamburger toggle, keyboard navigable focus rings.
 
 ### [ORGANISM]: HeroOrganism
 - **Filepath**: `src/components/organisms/HeroOrganism.tsx`
 - **Atomic Tier**: `Organism`
-- **Underlying Primitives**: High-resolution mobile dentistry photograph (`/hero-dentist-home.jpg`), dual-layer WCAG AAA contrast lighting gradient, 7:5 widescreen balanced grid, primary H1 typography, dual conversion CTAs, trust metric badges, floating glass medical reassurance card.
+- **Underlying Primitives**: High-resolution mobile dentistry photograph (`/hero-dentist-home.jpg`), dual-layer WCAG AAA contrast lighting gradient, 7:5 widescreen balanced grid, primary H1 typography, live availability response indicator, dual conversion CTAs, trust metric badges, floating glass medical reassurance card.
 - **Tokens Consumed**:
   - Surface: `bg-background`, `bg-white/90 backdrop-blur-md`
   - Typography: `text-primary`, `text-foreground`
@@ -132,17 +134,17 @@
 ### [ORGANISM]: HowItWorksOrganism
 - **Filepath**: `src/components/organisms/HowItWorksOrganism.tsx`
 - **Atomic Tier**: `Organism`
-- **Underlying Primitives**: 3-step numbered journey explaining WhatsApp booking, home arrival with autoclave-sterilized portable kit, and clean wrap-up.
+- **Underlying Primitives**: 3-step numbered journey with desktop dashed connector line guide, interactive card elevation on hover (`-translate-y-1.5`), and animated step badge highlights.
 
-### [ORGANISM]: CatchmentOrganism
-- **Filepath**: `src/components/organisms/CatchmentOrganism.tsx`
+### [ORGANISM]: ServiceAreaHoursOrganism
+- **Filepath**: `src/components/organisms/ServiceAreaHoursOrganism.tsx`
 - **Atomic Tier**: `Organism`
-- **Underlying Primitives**: Coverage zone badges, travel policy disclosure, and `PostcodeEligibilityChecker`.
+- **Underlying Primitives**: Catchment zones, visiting hours, emergency care notices, and dynamic Postcode Eligibility Checker with animated verification card and 1-tap contextual WhatsApp booking intent button.
 
-### [ORGANISM]: SafetyHygieneOrganism
-- **Filepath**: `src/components/organisms/SafetyHygieneOrganism.tsx`
+### [ORGANISM]: EquipmentSafetyOrganism
+- **Filepath**: `src/components/organisms/EquipmentSafetyOrganism.tsx`
 - **Atomic Tier**: `Organism`
-- **Underlying Primitives**: 4-point clinical sterilization reassurance grid with medical-grade protocols.
+- **Underlying Primitives**: 2-column clinical sterilization reassurance grid (What We Bring vs. What You Provide) with interactive hover row highlights and infection-control disclosures.
 
 ### [ORGANISM]: MeetDentistOrganism
 - **Filepath**: `src/components/organisms/MeetDentistOrganism.tsx`
@@ -152,12 +154,12 @@
 ### [ORGANISM]: FAQOrganism
 - **Filepath**: `src/components/organisms/FAQOrganism.tsx`
 - **Atomic Tier**: `Organism`
-- **Underlying Primitives**: Accessible Radix `Accordion` answering top senior, carer, and family anxiety questions.
+- **Underlying Primitives**: Accessible Radix `Accordion` paired with real-time keyword search filter, query reset, result counter, and friendly fallback empty state with direct WhatsApp inquiry trigger.
 
 ### [ORGANISM]: FloatingWhatsAppCTAOrganism
 - **Filepath**: `src/components/organisms/FloatingWhatsAppCTAOrganism.tsx`
 - **Atomic Tier**: `Organism`
-- **Underlying Primitives**: Fixed mobile bottom conversion bar (`md:hidden`) with dual WhatsApp and Telephone direct dial actions.
+- **Underlying Primitives**: Fixed mobile bottom conversion bar (`md:hidden`) with live pulsating green availability beacon, primary WhatsApp chat button, and senior-first direct telephone fallback button.
 
 ### [ORGANISM]: FooterOrganism
 - **Filepath**: `src/components/organisms/FooterOrganism.tsx`

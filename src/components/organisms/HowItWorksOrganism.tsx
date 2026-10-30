@@ -16,15 +16,26 @@ export const HowItWorksOrganism: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          {SITE_CONTENT.howItWorks.steps.map((step) => (
-            <ProcessStepMolecule
-              key={step.number}
-              number={step.number}
-              title={step.title}
-              description={step.description}
-            />
-          ))}
+        {/* Step Cards with Visual Connector Guide */}
+        <div className="relative">
+          {/* Subtle desktop connecting guide line */}
+          <div
+            className="hidden md:block absolute top-[68px] left-[15%] right-[15%] h-[2px] border-t-2 border-dashed border-sky-line z-0 pointer-events-none"
+            aria-hidden="true"
+          />
+
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            {SITE_CONTENT.howItWorks.steps.map((step, idx) => (
+              <ProcessStepMolecule
+                key={step.number}
+                number={step.number}
+                title={step.title}
+                description={step.description}
+                index={idx}
+                total={SITE_CONTENT.howItWorks.steps.length}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

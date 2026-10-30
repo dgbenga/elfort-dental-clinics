@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MapPin, Clock, AlertTriangle, CheckCircle, Search } from 'lucide-react';
 import { HeadingAtom } from '@/components/atoms/HeadingAtom';
 import { CardAtom } from '@/components/atoms/CardAtom';
+import { WhatsAppCTAButton } from '@/components/molecules/WhatsAppCTAButton';
 import { SITE_CONTENT, PRACTICE_CONFIG } from '@/data/content';
 
 export const ServiceAreaHoursOrganism: React.FC = () => {
@@ -94,15 +95,40 @@ export const ServiceAreaHoursOrganism: React.FC = () => {
                 </form>
 
                 {result === 'eligible' && (
-                  <div className="mt-3 text-sm font-semibold text-emerald-800 flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>✓ Confirmed! Your area qualifies for standard zero-surcharge visits.</span>
+                  <div className="mt-4 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 animate-in fade-in slide-in-from-top-2 duration-200">
+                    <div className="flex items-center gap-2 mb-2 font-bold text-sm text-emerald-800">
+                      <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" aria-hidden="true" />
+                      <span>Zero-Surcharge Catchment Area Confirmed</span>
+                    </div>
+                    <p className="text-sm text-emerald-900/90 mb-3 leading-relaxed">
+                      Postal code <strong>{postcode.toUpperCase()}</strong> qualifies for standard routine visits with zero travel surcharges.
+                    </p>
+                    <WhatsAppCTAButton
+                      size="sm"
+                      label={`Book Visit for ${postcode.toUpperCase()}`}
+                      prefilledText={`Hello Elfort Dental Clinics, I verified my postal code (${postcode.toUpperCase()}) on your website and would like to ask about booking a home visit.`}
+                      locationTag="postcode_eligible_cta"
+                      className="w-full text-center text-sm font-semibold justify-center h-10"
+                    />
                   </div>
                 )}
                 {result === 'inquire' && (
-                  <div className="mt-3 text-sm text-primary flex items-start gap-2">
-                    <span className="shrink-0 font-bold">•</span>
-                    <span>We can likely still visit! Send us a quick WhatsApp message to confirm travel options for this postal code.</span>
+                  <div className="mt-4 p-4 rounded-xl bg-white border border-sky-line text-foreground animate-in fade-in slide-in-from-top-2 duration-200">
+                    <div className="flex items-center gap-2 mb-2 font-bold text-sm text-primary">
+                      <span className="w-2 h-2 rounded-full bg-primary" />
+                      <span>Custom Arrangement Available</span>
+                    </div>
+                    <p className="text-sm text-ink-muted mb-3 leading-relaxed">
+                      Postal code <strong>{postcode.toUpperCase()}</strong> may be just beyond our standard primary zone, but we frequently accommodate extended visits by prior arrangement.
+                    </p>
+                    <WhatsAppCTAButton
+                      variant="outline"
+                      size="sm"
+                      label={`Ask About Visiting ${postcode.toUpperCase()}`}
+                      prefilledText={`Hello Elfort Dental Clinics, my postal code is ${postcode.toUpperCase()} and I would like to check if a home visit can be arranged.`}
+                      locationTag="postcode_inquire_cta"
+                      className="w-full text-center text-sm font-semibold justify-center h-10"
+                    />
                   </div>
                 )}
               </div>

@@ -19,9 +19,12 @@ export const EquipmentSafetyOrganism: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* What We Bring */}
-          <CardAtom variant="default" className="bg-white border-2 border-sky-line">
+          <CardAtom
+            variant="default"
+            className="bg-white border-2 border-sky-line hover:border-primary/50 hover:shadow-clinical-hover transition-all duration-300 p-6 sm:p-8 rounded-2xl"
+          >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-2xl bg-sky-main text-primary flex items-center justify-center border border-sky-line shrink-0">
+              <div className="w-12 h-12 rounded-2xl bg-sky-main text-primary flex items-center justify-center border border-sky-line shrink-0 shadow-2xs">
                 <ShieldCheck className="w-6 h-6" aria-hidden="true" />
               </div>
               <HeadingAtom level={3} className="text-2xl text-primary font-bold">
@@ -29,20 +32,30 @@ export const EquipmentSafetyOrganism: React.FC = () => {
               </HeadingAtom>
             </div>
 
-            <ul className="space-y-4" role="list">
+            <ul className="space-y-3" role="list">
               {SITE_CONTENT.equipment.weBring.items.map((item, idx) => (
-                <li key={idx} className="flex items-start gap-3.5">
+                <li
+                  key={idx}
+                  className="flex items-start gap-3.5 p-2 rounded-xl hover:bg-sky-main/30 transition-colors"
+                >
                   <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-1 stroke-[2.2]" aria-hidden="true" />
                   <span className="text-foreground text-lg leading-relaxed">{item}</span>
                 </li>
               ))}
             </ul>
+
+            <div className="mt-6 pt-4 border-t border-sky-line/50 text-xs text-ink-muted">
+              <span>All sterilization verified in accordance with national infection control guidelines.</span>
+            </div>
           </CardAtom>
 
           {/* What You Provide */}
-          <CardAtom variant="default" className="bg-white border-2 border-sky-line">
+          <CardAtom
+            variant="default"
+            className="bg-white border-2 border-sky-line hover:border-primary/50 hover:shadow-clinical-hover transition-all duration-300 p-6 sm:p-8 rounded-2xl"
+          >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-2xl bg-sky-main text-primary flex items-center justify-center border border-sky-line shrink-0">
+              <div className="w-12 h-12 rounded-2xl bg-sky-main text-primary flex items-center justify-center border border-sky-line shrink-0 shadow-2xs">
                 <Home className="w-6 h-6" aria-hidden="true" />
               </div>
               <HeadingAtom level={3} className="text-2xl text-primary font-bold">
@@ -50,14 +63,21 @@ export const EquipmentSafetyOrganism: React.FC = () => {
               </HeadingAtom>
             </div>
 
-            <ul className="space-y-4" role="list">
+            <ul className="space-y-3" role="list">
               {SITE_CONTENT.equipment.youProvide.items.map((item, idx) => (
-                <li key={idx} className="flex items-start gap-3.5">
+                <li
+                  key={idx}
+                  className="flex items-start gap-3.5 p-2 rounded-xl hover:bg-sky-main/30 transition-colors"
+                >
                   <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-1 stroke-[2.2]" aria-hidden="true" />
                   <span className="text-foreground text-lg leading-relaxed">{item}</span>
                 </li>
               ))}
             </ul>
+
+            <div className="mt-6 pt-4 border-t border-sky-line/50 text-xs text-ink-muted">
+              <span>No specialized dental chairs or plumbing required in your home.</span>
+            </div>
           </CardAtom>
         </div>
       </div>
