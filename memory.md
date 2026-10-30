@@ -82,3 +82,35 @@ Living multi-session state snapshot maintained per `AGENTS.md` and the `remember
   - [`vercel.json`](file:///c:/Users/HP/Documents/elfote/vercel.json)
   - [`context/build-checklist.md`](file:///c:/Users/HP/Documents/elfote/context/build-checklist.md)
 
+---
+
+## Session Checkpoint: Comprehensive Mobile UI & Touch Ergonomics Overhaul (2026-10-30T17:58:00+01:00)
+
+### 1. Work Completed
+- **Mobile Header & Drawer (`src/components/organisms/HeaderOrganism.tsx`)**:
+  - Added instant 1-tap direct Call and WhatsApp quick action buttons in top mobile bar.
+  - Added full mobile drawer backdrop overlay and smooth slide-down sheet with 48px+ touch targets and live availability indicator.
+- **Mobile Storytelling Hero (`src/components/organisms/HeroOrganism.tsx`)**:
+  - Replaced opaque washed-out overlay with dedicated mobile photo card (`hero-dentist-home.jpg`).
+  - Added mobile doctor credential & reassurance card (credentials, 3 clinical guarantees, availability beacon).
+  - Optimized headline and subheadline typography for 375px floor.
+- **Mobile Service Card Explorer (`src/components/organisms/ServicesPricingOrganism.tsx`)**:
+  - Solved sticky card scroll-trap issue on mobile devices.
+  - Introduced interactive mobile service carousel with 5 horizontal pill categories, active card preview, Prev/Next navigation, indicator dots, and a "Full List" toggle.
+  - Desktop sticky landscape deck preserved intact for large screens.
+- **Mobile Card Padding & Ergonomics**:
+  - Refined nested padding across `ServiceCardMolecule`, `ProcessStepMolecule`, `AudienceCardMolecule`, `EquipmentSafetyOrganism`, `ScopeBoundariesOrganism`, `TrustPromiseOrganism`, and `MeetDentistOrganism`.
+  - Added `.scrollbar-none` in `src/index.css` for clean mobile pill carousels.
+  - Upgraded Postcode Checker input/button to 48px (`h-12`) with 16px font to prevent iOS auto-zoom.
+- **Floating Mobile Dock & Footer Clearance (`FloatingWhatsAppCTAOrganism.tsx`, `App.tsx`, `FooterOrganism.tsx`)**:
+  - Polished floating dock with high-contrast copy (*"Chat on WhatsApp · Replies in ~30 mins"*), pulsing beacon, and direct phone dial button.
+  - Added `pb-24` on `<main>` and `pb-28` on `<footer>` so floating dock never obscures footer links.
+- **Git & GitHub Deployment**:
+  - Staged and committed all changes (`7713a04`).
+  - Pushed commit to `origin/main` on GitHub (`https://github.com/dgbenga/elfort-dental-clinics.git`).
+
+### 2. Verification
+- `npm run build` (`tsc -b && vite build`) passing green with 0 errors.
+- Git working tree clean. Remote branch up to date.
+
+
