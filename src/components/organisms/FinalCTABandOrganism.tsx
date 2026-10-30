@@ -1,8 +1,7 @@
 import React from 'react';
-import { Phone } from 'lucide-react';
 import { HeadingAtom } from '@/components/atoms/HeadingAtom';
-import { WhatsAppCTAButton } from '@/components/molecules/WhatsAppCTAButton';
-import { SITE_CONTENT, PRACTICE_CONFIG } from '@/data/content';
+import { MinimalistContactActions } from '@/components/molecules/MinimalistContactActions';
+import { SITE_CONTENT } from '@/data/content';
 
 export const FinalCTABandOrganism: React.FC = () => {
   return (
@@ -15,38 +14,21 @@ export const FinalCTABandOrganism: React.FC = () => {
           {SITE_CONTENT.finalCTA.title}
         </HeadingAtom>
 
-        <p className="text-base sm:text-2xl text-white/90 leading-relaxed mb-8 sm:mb-10 max-w-2xl mx-auto font-normal">
+        <p className="text-base sm:text-2xl text-white/90 leading-relaxed mb-6 sm:mb-8 max-w-2xl mx-auto font-normal">
           {SITE_CONTENT.finalCTA.subtitle}
         </p>
 
-        {/* Primary White Button (High Contrast on Navy) */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-          <WhatsAppCTAButton
-            variant="navy-inverted"
+        {/* Small Minimalist Contact Action Icons */}
+        <div className="flex items-center justify-center gap-4 mb-4">
+          <MinimalistContactActions
             size="lg"
-            label={SITE_CONTENT.finalCTA.buttonText}
-            prefilledText={SITE_CONTENT.finalCTA.prefilledText}
+            variant="inverted"
             locationTag="final_cta_band"
-            className="text-base sm:text-xl font-bold px-8 sm:px-10 text-primary shadow-[0_8px_30px_rgba(0,0,0,0.25)] h-[54px] w-full sm:w-auto"
           />
         </div>
 
-        {/* Direct Phone Dial Option */}
-        <div className="flex items-center justify-center gap-2 text-white/90 text-sm sm:text-lg mb-3 sm:mb-4">
-          <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-white shrink-0" aria-hidden="true" />
-          <span>
-            {SITE_CONTENT.finalCTA.phonePrompt}{' '}
-            <a
-              href={`tel:${PRACTICE_CONFIG.phoneRaw}`}
-              className="font-bold underline underline-offset-4 hover:text-white transition-colors"
-            >
-              {PRACTICE_CONFIG.phoneDisplay}
-            </a>
-          </span>
-        </div>
-
         <p className="text-xs sm:text-sm text-white/70">
-          {SITE_CONTENT.finalCTA.microCopy}
+          Tap WhatsApp or Call icon · {SITE_CONTENT.finalCTA.microCopy}
         </p>
       </div>
     </section>

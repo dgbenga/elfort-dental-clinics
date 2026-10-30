@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, MessageSquare } from 'lucide-react';
-import { WhatsAppCTAButton } from '@/components/molecules/WhatsAppCTAButton';
+import { MinimalistContactActions } from '@/components/molecules/MinimalistContactActions';
 import { SITE_CONTENT, PRACTICE_CONFIG } from '@/data/content';
 import { buildWhatsAppUrl } from '@/lib/utils';
 
@@ -92,7 +92,7 @@ export const HeaderOrganism: React.FC = () => {
           ))}
         </nav>
 
-        {/* Desktop Right Action: Live Beacon & WhatsApp CTA */}
+        {/* Desktop Right Action: Live Beacon & Small Minimalist Icons */}
         <div className="hidden sm:flex items-center gap-3">
           <div className="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-main text-primary text-xs font-semibold border border-sky-line">
             <span className="relative flex h-2 w-2">
@@ -102,12 +102,7 @@ export const HeaderOrganism: React.FC = () => {
             <span>Online · Available This Week</span>
           </div>
 
-          <WhatsAppCTAButton
-            size="sm"
-            label="Chat on WhatsApp"
-            locationTag="desktop_nav"
-            className="h-10 px-4 text-sm font-semibold shadow-xs"
-          />
+          <MinimalistContactActions size="sm" locationTag="desktop_nav" />
         </div>
 
         {/* Mobile Header Quick Actions & Toggle */}
@@ -188,27 +183,14 @@ export const HeaderOrganism: React.FC = () => {
             ))}
           </nav>
 
-          {/* Direct Contact Actions */}
-          <div className="mt-5 pt-4 border-t border-sky-line/80 space-y-3">
-            <WhatsAppCTAButton
-              size="default"
-              label="Chat on WhatsApp"
-              locationTag="mobile_menu"
-              className="w-full text-center h-12 text-base font-bold shadow-xs"
-            />
-
-            <a
-              href={`tel:${PRACTICE_CONFIG.phoneRaw}`}
-              className="flex items-center justify-center gap-2.5 w-full h-12 rounded-xl bg-white text-primary font-bold text-base border-2 border-sky-line hover:bg-sky-main active:scale-[0.98] transition-all shadow-2xs"
-            >
-              <Phone className="w-4 h-4 text-primary shrink-0" aria-hidden="true" />
-              <span>Call: {PRACTICE_CONFIG.phoneDisplay}</span>
-            </a>
-
-            <p className="text-center text-xs text-ink-muted pt-1">
-              Free to ask · No forms · Replies in ~30 mins
-            </p>
+          {/* Direct Minimalist Contact Actions */}
+          <div className="mt-5 pt-4 border-t border-sky-line/80 flex items-center justify-between">
+            <span className="text-sm font-semibold text-primary">Direct contact:</span>
+            <MinimalistContactActions size="md" locationTag="mobile_menu" />
           </div>
+          <p className="text-center text-xs text-ink-muted pt-3">
+            Free to ask · No forms · Replies in ~30 mins
+          </p>
         </div>
       )}
     </header>

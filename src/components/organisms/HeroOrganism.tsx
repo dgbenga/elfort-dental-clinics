@@ -2,8 +2,7 @@ import React from 'react';
 import { Award, ShieldCheck, Tag, Clock, CheckCircle } from 'lucide-react';
 import { HeadingAtom } from '@/components/atoms/HeadingAtom';
 import { CardAtom } from '@/components/atoms/CardAtom';
-import { WhatsAppCTAButton } from '@/components/molecules/WhatsAppCTAButton';
-import { PhoneCallButton } from '@/components/molecules/PhoneCallButton';
+import { MinimalistContactActions } from '@/components/molecules/MinimalistContactActions';
 import { TrustProofMolecule } from '@/components/molecules/TrustProofMolecule';
 import { SITE_CONTENT, PRACTICE_CONFIG } from '@/data/content';
 
@@ -70,20 +69,20 @@ export const HeroOrganism: React.FC = () => {
               </div>
             </div>
 
-            {/* Dual Action Buttons (Optimized 52px+ touch targets on mobile) */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 mb-3">
-              <WhatsAppCTAButton
+            {/* Minimalist Contact Actions: Small Minimalist Icons (No big bulky buttons or phone number text) */}
+            <div className="flex items-center gap-4 mb-4">
+              <MinimalistContactActions
                 size="lg"
-                label={SITE_CONTENT.hero.primaryButtonText}
-                prefilledText={SITE_CONTENT.hero.prefilledText}
-                locationTag="hero_primary"
-                className="text-lg sm:text-xl shadow-[0_4px_18px_rgba(11,58,117,0.25)] h-[54px]"
+                locationTag="hero_minimalist_cta"
               />
-              <PhoneCallButton
-                size="lg"
-                label={SITE_CONTENT.hero.secondaryButtonText}
-                className="bg-white hover:bg-secondary text-primary border-2 border-border text-lg shadow-xs h-[52px]"
-              />
+              <div className="flex flex-col text-left">
+                <span className="text-sm font-bold text-primary leading-tight">
+                  Start a conversation
+                </span>
+                <span className="text-xs text-ink-muted leading-tight">
+                  Tap WhatsApp or Call icon
+                </span>
+              </div>
             </div>
 
             {/* Micro Assurance Copy with Live Availability Pulse */}

@@ -1,8 +1,8 @@
 import React from 'react';
-import { Church, Building2, Users2, Check, Mail, Phone } from 'lucide-react';
+import { Church, Building2, Users2, Check, Mail } from 'lucide-react';
 import { HeadingAtom } from '@/components/atoms/HeadingAtom';
 import { CardAtom } from '@/components/atoms/CardAtom';
-import { WhatsAppCTAButton } from '@/components/molecules/WhatsAppCTAButton';
+import { MinimalistContactActions } from '@/components/molecules/MinimalistContactActions';
 import { SITE_CONTENT, PRACTICE_CONFIG } from '@/data/content';
 
 const PILLAR_ICONS = [Church, Building2, Users2];
@@ -77,32 +77,20 @@ export const CommunityOutreachOrganism: React.FC = () => {
               </p>
             </div>
 
-            <div className="lg:col-span-5 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
-              <WhatsAppCTAButton
-                size="lg"
-                label={SITE_CONTENT.outreach.ctaText}
+            <div className="lg:col-span-5 flex items-center justify-center lg:justify-end gap-3">
+              <MinimalistContactActions
                 prefilledText={SITE_CONTENT.outreach.prefilledText}
                 locationTag="outreach_partner_cta"
-                className="w-full text-center h-[52px]"
+                size="lg"
               />
-
-              <div className="flex flex-col sm:flex-row gap-2.5 w-full">
-                <a
-                  href={`tel:${PRACTICE_CONFIG.phoneRaw}`}
-                  className="flex-1 inline-flex items-center justify-center gap-2 h-12 px-4 rounded-xl bg-sky-main hover:bg-sky-deep text-primary font-semibold text-sm border border-sky-line transition-colors active:scale-95"
-                >
-                  <Phone className="w-4 h-4 shrink-0" aria-hidden="true" />
-                  <span>Call {PRACTICE_CONFIG.phoneDisplay}</span>
-                </a>
-
-                <a
-                  href={`mailto:${PRACTICE_CONFIG.email}?subject=Inquiry%20about%20Dental%20Outreach%20Partnership`}
-                  className="flex-1 inline-flex items-center justify-center gap-2 h-12 px-4 rounded-xl bg-white hover:bg-sky-main text-primary font-semibold text-sm border border-sky-line transition-colors active:scale-95"
-                >
-                  <Mail className="w-4 h-4 shrink-0" aria-hidden="true" />
-                  <span>Email Us</span>
-                </a>
-              </div>
+              <a
+                href={`mailto:${PRACTICE_CONFIG.email}?subject=Inquiry%20about%20Dental%20Outreach%20Partnership`}
+                className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white text-primary flex items-center justify-center border-2 border-sky-line hover:bg-sky-main/60 active:scale-95 transition-all shadow-xs"
+                aria-label="Email us about partnership"
+                title="Email us"
+              >
+                <Mail className="w-5 h-5 sm:w-6 sm:h-6 shrink-0" aria-hidden="true" />
+              </a>
             </div>
           </div>
         </div>

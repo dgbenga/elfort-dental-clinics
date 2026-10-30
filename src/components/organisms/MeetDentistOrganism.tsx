@@ -2,8 +2,7 @@ import React from 'react';
 import { Award, Shield, CheckCircle } from 'lucide-react';
 import { HeadingAtom } from '@/components/atoms/HeadingAtom';
 import { CardAtom } from '@/components/atoms/CardAtom';
-import { WhatsAppCTAButton } from '@/components/molecules/WhatsAppCTAButton';
-import { PhoneCallButton } from '@/components/molecules/PhoneCallButton';
+import { MinimalistContactActions } from '@/components/molecules/MinimalistContactActions';
 import { SITE_CONTENT, PRACTICE_CONFIG } from '@/data/content';
 
 export const MeetDentistOrganism: React.FC = () => {
@@ -67,15 +66,13 @@ export const MeetDentistOrganism: React.FC = () => {
               <p>{SITE_CONTENT.about.bioParagraph2}</p>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 pt-4 border-t border-sky-line/50">
-              <WhatsAppCTAButton
-                size="default"
-                label={SITE_CONTENT.about.ctaButtonText}
+            <div className="flex items-center gap-3 pt-4 border-t border-sky-line/50">
+              <MinimalistContactActions
                 prefilledText={SITE_CONTENT.about.prefilledText}
                 locationTag="about_section"
-                className="h-[52px]"
+                size="md"
               />
-              <PhoneCallButton size="default" className="h-[50px]" />
+              <span className="text-xs text-ink-muted">Tap to message or call directly</span>
             </div>
           </div>
         </div>

@@ -3,7 +3,7 @@ import * as Accordion from '@radix-ui/react-accordion';
 import { Search, X, HelpCircle } from 'lucide-react';
 import { HeadingAtom } from '@/components/atoms/HeadingAtom';
 import { FAQAccordionItem } from '@/components/molecules/FAQAccordionItem';
-import { WhatsAppCTAButton } from '@/components/molecules/WhatsAppCTAButton';
+import { MinimalistContactActions } from '@/components/molecules/MinimalistContactActions';
 import { SITE_CONTENT } from '@/data/content';
 
 export const FAQOrganism: React.FC = () => {
@@ -84,16 +84,16 @@ export const FAQOrganism: React.FC = () => {
             <span className="text-xl font-bold text-primary block mb-2">
               No matching questions found
             </span>
-            <p className="text-foreground text-base mb-6 leading-relaxed">
+            <p className="text-foreground text-base mb-4 leading-relaxed">
               We couldn&apos;t find an answer matching &ldquo;{searchQuery}&rdquo;. Send Dr. Elfort a quick message and we will answer you directly!
             </p>
-            <WhatsAppCTAButton
-              size="sm"
-              label="Ask Us Your Question"
-              prefilledText={`Hello Elfort Dental Clinics, I was searching your FAQs about "${searchQuery}" and would like to ask directly.`}
-              locationTag="faq_empty_search"
-              className="w-full sm:w-auto"
-            />
+            <div className="flex items-center justify-center gap-3">
+              <MinimalistContactActions
+                size="md"
+                prefilledText={`Hello Elfort Dental Clinics, I was searching your FAQs about "${searchQuery}" and would like to ask directly.`}
+                locationTag="faq_empty_search"
+              />
+            </div>
           </div>
         )}
 
@@ -102,15 +102,16 @@ export const FAQOrganism: React.FC = () => {
           <span className="text-lg sm:text-xl font-bold text-primary block mb-2">
             Have a specific question about your home or loved one?
           </span>
-          <p className="text-foreground text-sm sm:text-lg mb-5 sm:mb-6 leading-relaxed">
+          <p className="text-foreground text-sm sm:text-lg mb-4 sm:mb-5 leading-relaxed">
             We are always happy to answer questions with zero obligation before you decide to book.
           </p>
-          <WhatsAppCTAButton
-            label="Ask a Question on WhatsApp"
-            prefilledText="Hello Elfort Dental Clinics, I have a question about whether a home visit or outreach is right for my situation."
-            locationTag="faq_cta"
-            className="w-full sm:w-auto h-[52px]"
-          />
+          <div className="flex items-center justify-center gap-3">
+            <MinimalistContactActions
+              prefilledText="Hello Elfort Dental Clinics, I have a question about whether a home visit or outreach is right for my situation."
+              locationTag="faq_cta"
+              size="md"
+            />
+          </div>
         </div>
       </div>
     </section>

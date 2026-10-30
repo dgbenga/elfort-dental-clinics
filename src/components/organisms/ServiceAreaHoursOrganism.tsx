@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { MapPin, Clock, AlertTriangle, CheckCircle, Search } from 'lucide-react';
 import { HeadingAtom } from '@/components/atoms/HeadingAtom';
 import { CardAtom } from '@/components/atoms/CardAtom';
-import { WhatsAppCTAButton } from '@/components/molecules/WhatsAppCTAButton';
+import { MinimalistContactActions } from '@/components/molecules/MinimalistContactActions';
 import { SITE_CONTENT, PRACTICE_CONFIG } from '@/data/content';
 
 export const ServiceAreaHoursOrganism: React.FC = () => {
@@ -105,13 +105,14 @@ export const ServiceAreaHoursOrganism: React.FC = () => {
                     <p className="text-xs sm:text-sm text-emerald-900/90 mb-3 leading-relaxed">
                       Postal code <strong>{postcode.toUpperCase()}</strong> qualifies for standard routine visits with zero travel surcharges.
                     </p>
-                    <WhatsAppCTAButton
-                      size="sm"
-                      label={`Book Visit for ${postcode.toUpperCase()}`}
-                      prefilledText={`Hello Elfort Dental Clinics, I verified my postal code (${postcode.toUpperCase()}) on your website and would like to ask about booking a home visit.`}
-                      locationTag="postcode_eligible_cta"
-                      className="w-full text-center text-sm font-semibold justify-center h-11"
-                    />
+                    <div className="flex items-center justify-between pt-1">
+                      <span className="text-xs font-semibold text-emerald-900">Book visit:</span>
+                      <MinimalistContactActions
+                        size="sm"
+                        prefilledText={`Hello Elfort Dental Clinics, I verified my postal code (${postcode.toUpperCase()}) on your website and would like to ask about booking a home visit.`}
+                        locationTag="postcode_eligible_cta"
+                      />
+                    </div>
                   </div>
                 )}
                 {result === 'inquire' && (
@@ -123,14 +124,14 @@ export const ServiceAreaHoursOrganism: React.FC = () => {
                     <p className="text-xs sm:text-sm text-ink-muted mb-3 leading-relaxed">
                       Postal code <strong>{postcode.toUpperCase()}</strong> may be just beyond our standard primary zone, but we frequently accommodate extended visits by prior arrangement.
                     </p>
-                    <WhatsAppCTAButton
-                      variant="outline"
-                      size="sm"
-                      label={`Ask About Visiting ${postcode.toUpperCase()}`}
-                      prefilledText={`Hello Elfort Dental Clinics, my postal code is ${postcode.toUpperCase()} and I would like to check if a home visit can be arranged.`}
-                      locationTag="postcode_inquire_cta"
-                      className="w-full text-center text-sm font-semibold justify-center h-11"
-                    />
+                    <div className="flex items-center justify-between pt-1">
+                      <span className="text-xs font-semibold text-primary">Ask about visiting:</span>
+                      <MinimalistContactActions
+                        size="sm"
+                        prefilledText={`Hello Elfort Dental Clinics, my postal code is ${postcode.toUpperCase()} and I would like to check if a home visit can be arranged.`}
+                        locationTag="postcode_inquire_cta"
+                      />
+                    </div>
                   </div>
                 )}
               </div>
