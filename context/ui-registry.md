@@ -72,11 +72,17 @@
   <PhoneCallButton phoneNumber="0814 419 9019" />
   ```
 
-### [MOLECULE]: ServiceCard
-- **Filepath**: `src/components/molecules/ServiceCard.tsx`
+### [MOLECULE]: ServiceCardMolecule
+- **Filepath**: `src/components/molecules/ServiceCardMolecule.tsx`
 - **Atomic Tier**: `Molecule`
-- **Underlying Primitives**: `Card` + `WhatsAppCTAButton` + typography stack
-- **Purpose**: Displays clinical procedure details, transparent pricing in Nigerian Naira (₦), inclusions list, and direct booking trigger.
+- **Underlying Primitives**: `CardAtom` + `HeadingAtom` + `WhatsAppCTAButton` + Lucide (`Check`, `ShieldCheck`)
+- **Purpose**: Displays clinical procedure details in a 7:5 landscape responsive card layout with structural metadata counter (`Service 01 / 05`), upfront pricing badge in Nigerian Naira (₦), itemized inclusions checklist, clinical sterilization footnotes, and direct WhatsApp booking trigger.
+- **Props**: `service: ServiceItem`, `featured?: boolean`, `index?: number`, `total?: number`, `className?: string`
+- **Tokens Consumed**:
+  - Surface: `bg-card`, `bg-sky-main/40`
+  - Border: `border-sky-line/80`, `ring-primary/40`
+  - Typography: `text-primary`, `text-foreground`, `text-ink-muted`
+  - Badges: `bg-sky-main text-primary border-sky-line font-mono`
 
 ### [MOLECULE]: PostcodeEligibilityChecker
 - **Filepath**: `src/components/molecules/PostcodeEligibilityChecker.tsx`
@@ -111,7 +117,12 @@
 ### [ORGANISM]: ServicesPricingOrganism
 - **Filepath**: `src/components/organisms/ServicesPricingOrganism.tsx`
 - **Atomic Tier**: `Organism`
-- **Underlying Primitives**: Wide featured combination service banner + balanced 2×2 card grid showcasing all 5 clinical offerings with transparent pricing.
+- **Underlying Primitives**: Sticky stacking landscape card deck (`.card-stack-item` sticky with responsive top offsets and progressive z-indexing) showcasing all clinical offerings with upfront transparent pricing, followed by a transparent receipts and insurance assurance card (`z-30`).
+- **Tokens Consumed**:
+  - Surface: `bg-white`, `bg-sky-main/50`
+  - Border: `border-sky-line/50`
+  - Typography: `text-primary`, `text-ink-muted`, `text-foreground`
+  - CSS Variables: `--stack-top-base`, `--stack-step`
 
 ### [ORGANISM]: CommunityOutreachOrganism
 - **Filepath**: `src/components/organisms/CommunityOutreachOrganism.tsx`
