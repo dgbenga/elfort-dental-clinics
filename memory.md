@@ -69,12 +69,16 @@ Living multi-session state snapshot maintained per `AGENTS.md` and the `remember
 - **Single-Knob Token Fidelity**: All new interactive states consume project CSS variables (`--primary`, `--card`, `--sky-main`, `--sky-line`, etc.).
 
 ### 3. Pending Sub-Steps (Immediate Backlog)
-- [ ] Commit interactive animation sprint changes to git.
-- [ ] Final visual regression review across mobile (375px) and desktop (1280px).
+- [x] Commit interactive animation sprint changes to git (`70aaa0a`).
+- [x] Add Vercel production deployment configuration (`vercel.json`).
+- [x] Create GitHub repository `dgbenga/elfort-dental-clinics`.
+- [x] Push local `main` branch to GitHub remote (`origin/main`).
+- [ ] Connect repository to Vercel dashboard and deploy.
 
 ### 4. Cold Resumption Prompt & Exact Next Step
-- **Immediate Next Action**: Run `git add` and `git commit` for the completed interactive animation sprint.
+- **Immediate Next Action**: Go to Vercel dashboard (`vercel.com/new`), import `dgbenga/elfort-dental-clinics`, and trigger deployment.
+- **Repository Remote**: `https://github.com/dgbenga/elfort-dental-clinics`
 - **Required Context**:
-  - [`context/ui-registry.md`](file:///c:/Users/HP/Documents/elfote/context/ui-registry.md)
-  - [`memory.md`](file:///c:/Users/HP/Documents/elfote/memory.md)
+  - [`vercel.json`](file:///c:/Users/HP/Documents/elfote/vercel.json)
+  - [`context/build-checklist.md`](file:///c:/Users/HP/Documents/elfote/context/build-checklist.md)
 
