@@ -5,26 +5,26 @@ import { SITE_CONTENT } from '@/data/content';
 
 export const HowItWorksOrganism: React.FC = () => {
   return (
-    <section id="how-it-works" className="py-14 sm:py-20 bg-white border-b border-sky-line/50">
+    <section id="how-it-works" className="py-12 sm:py-20 bg-white border-b border-sky-line/50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl mb-10 sm:mb-14">
-          <HeadingAtom level={2} className="text-3xl sm:text-4xl mb-4">
+        <div className="max-w-2xl mb-8 sm:mb-14">
+          <HeadingAtom level={2} className="text-3xl sm:text-4xl mb-3 sm:mb-4">
             {SITE_CONTENT.howItWorks.title}
           </HeadingAtom>
-          <p className="text-lg sm:text-xl text-ink-muted leading-relaxed">
+          <p className="text-base sm:text-xl text-ink-muted leading-relaxed">
             {SITE_CONTENT.howItWorks.subtitle}
           </p>
         </div>
 
         {/* Step Cards with Visual Connector Guide */}
         <div className="relative">
-          {/* Subtle desktop connecting guide line */}
+          {/* Desktop horizontal connecting dashed line */}
           <div
             className="hidden md:block absolute top-[68px] left-[15%] right-[15%] h-[2px] border-t-2 border-dashed border-sky-line z-0 pointer-events-none"
             aria-hidden="true"
           />
 
-          <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-8">
             {SITE_CONTENT.howItWorks.steps.map((step, idx) => (
               <ProcessStepMolecule
                 key={step.number}

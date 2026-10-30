@@ -29,39 +29,39 @@ export const ServiceAreaHoursOrganism: React.FC = () => {
   };
 
   return (
-    <section className="py-14 sm:py-20 bg-white border-b border-sky-line/50">
+    <section className="py-12 sm:py-20 bg-white border-b border-sky-line/50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl mb-10 sm:mb-14">
-          <HeadingAtom level={2} className="text-3xl sm:text-4xl mb-4">
+        <div className="max-w-2xl mb-8 sm:mb-14">
+          <HeadingAtom level={2} className="text-3xl sm:text-4xl mb-3 sm:mb-4">
             {SITE_CONTENT.areaAndHours.title}
           </HeadingAtom>
-          <p className="text-lg sm:text-xl text-ink-muted leading-relaxed">
+          <p className="text-base sm:text-xl text-ink-muted leading-relaxed">
             {SITE_CONTENT.areaAndHours.subtitle}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8 mb-6 sm:mb-8">
           {/* Catchment Area Card */}
-          <CardAtom variant="default" className="bg-white border-2 border-sky-line flex flex-col justify-between">
+          <CardAtom variant="default" className="bg-white border-2 border-sky-line flex flex-col justify-between p-5 sm:p-8 rounded-2xl">
             <div>
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-2xl bg-sky-main text-primary flex items-center justify-center border border-sky-line shrink-0">
-                  <MapPin className="w-6 h-6" aria-hidden="true" />
+              <div className="flex items-center gap-3 mb-4 sm:mb-6">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-sky-main text-primary flex items-center justify-center border border-sky-line shrink-0">
+                  <MapPin className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
                 </div>
-                <HeadingAtom level={3} className="text-2xl text-primary font-bold">
+                <HeadingAtom level={3} className="text-xl sm:text-2xl text-primary font-bold">
                   {SITE_CONTENT.areaAndHours.catchmentTitle}
                 </HeadingAtom>
               </div>
 
-              <p className="text-foreground text-lg mb-6 leading-relaxed">
+              <p className="text-foreground text-sm sm:text-lg mb-5 sm:mb-6 leading-relaxed">
                 {SITE_CONTENT.areaAndHours.catchmentText}
               </p>
 
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="flex flex-wrap gap-2 mb-5 sm:mb-6">
                 {PRACTICE_CONFIG.catchmentAreas.map((area, idx) => (
                   <span
                     key={idx}
-                    className="px-3.5 py-1.5 rounded-xl bg-sky-main text-primary font-medium text-base border border-sky-line/80"
+                    className="px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-xl bg-sky-main text-primary font-medium text-xs sm:text-base border border-sky-line/80"
                   >
                     {area}
                   </span>
@@ -69,8 +69,8 @@ export const ServiceAreaHoursOrganism: React.FC = () => {
               </div>
 
               {/* Instant Postcode Checker */}
-              <div className="p-4 rounded-xl bg-sky-main/40 border border-sky-line mb-6">
-                <label htmlFor="postcode-input" className="block text-sm font-semibold text-primary mb-2">
+              <div className="p-3.5 sm:p-4 rounded-xl bg-sky-main/40 border border-sky-line mb-5 sm:mb-6">
+                <label htmlFor="postcode-input" className="block text-xs sm:text-sm font-semibold text-primary mb-2">
                   Check Your Postal Code:
                 </label>
                 <form onSubmit={checkPostcode} className="flex gap-2">
@@ -83,11 +83,13 @@ export const ServiceAreaHoursOrganism: React.FC = () => {
                       if (result !== 'idle') setResult('idle');
                     }}
                     placeholder="e.g. BS1 4DJ or BA1"
-                    className="flex-1 h-11 px-3.5 rounded-xl bg-white border border-sky-line text-foreground text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary uppercase"
+                    autoCapitalize="characters"
+                    autoCorrect="off"
+                    className="flex-1 h-12 px-3.5 rounded-xl bg-white border border-sky-line text-foreground text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary uppercase font-mono"
                   />
                   <button
                     type="submit"
-                    className="h-11 px-4 rounded-xl bg-primary text-white font-semibold text-sm hover:bg-primary-hover transition-colors flex items-center gap-1.5 shrink-0"
+                    className="h-12 px-4 rounded-xl bg-primary text-white font-semibold text-sm hover:bg-primary-hover active:scale-95 transition-all flex items-center gap-1.5 shrink-0 shadow-xs"
                   >
                     <Search className="w-4 h-4" aria-hidden="true" />
                     <span>Check</span>
@@ -100,7 +102,7 @@ export const ServiceAreaHoursOrganism: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" aria-hidden="true" />
                       <span>Zero-Surcharge Catchment Area Confirmed</span>
                     </div>
-                    <p className="text-sm text-emerald-900/90 mb-3 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-emerald-900/90 mb-3 leading-relaxed">
                       Postal code <strong>{postcode.toUpperCase()}</strong> qualifies for standard routine visits with zero travel surcharges.
                     </p>
                     <WhatsAppCTAButton
@@ -108,7 +110,7 @@ export const ServiceAreaHoursOrganism: React.FC = () => {
                       label={`Book Visit for ${postcode.toUpperCase()}`}
                       prefilledText={`Hello Elfort Dental Clinics, I verified my postal code (${postcode.toUpperCase()}) on your website and would like to ask about booking a home visit.`}
                       locationTag="postcode_eligible_cta"
-                      className="w-full text-center text-sm font-semibold justify-center h-10"
+                      className="w-full text-center text-sm font-semibold justify-center h-11"
                     />
                   </div>
                 )}
@@ -118,7 +120,7 @@ export const ServiceAreaHoursOrganism: React.FC = () => {
                       <span className="w-2 h-2 rounded-full bg-primary" />
                       <span>Custom Arrangement Available</span>
                     </div>
-                    <p className="text-sm text-ink-muted mb-3 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-ink-muted mb-3 leading-relaxed">
                       Postal code <strong>{postcode.toUpperCase()}</strong> may be just beyond our standard primary zone, but we frequently accommodate extended visits by prior arrangement.
                     </p>
                     <WhatsAppCTAButton
@@ -127,31 +129,31 @@ export const ServiceAreaHoursOrganism: React.FC = () => {
                       label={`Ask About Visiting ${postcode.toUpperCase()}`}
                       prefilledText={`Hello Elfort Dental Clinics, my postal code is ${postcode.toUpperCase()} and I would like to check if a home visit can be arranged.`}
                       locationTag="postcode_inquire_cta"
-                      className="w-full text-center text-sm font-semibold justify-center h-10"
+                      className="w-full text-center text-sm font-semibold justify-center h-11"
                     />
                   </div>
                 )}
               </div>
             </div>
 
-            <p className="text-ink-muted text-base pt-4 border-t border-sky-line/60">
+            <p className="text-ink-muted text-xs sm:text-base pt-3 sm:pt-4 border-t border-sky-line/60">
               {SITE_CONTENT.areaAndHours.travelNote}
             </p>
           </CardAtom>
 
           {/* Hours & Emergency Notice Card */}
-          <CardAtom variant="default" className="bg-white border-2 border-sky-line flex flex-col justify-between">
+          <CardAtom variant="default" className="bg-white border-2 border-sky-line flex flex-col justify-between p-5 sm:p-8 rounded-2xl">
             <div>
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-2xl bg-sky-main text-primary flex items-center justify-center border border-sky-line shrink-0">
-                  <Clock className="w-6 h-6" aria-hidden="true" />
+              <div className="flex items-center gap-3 mb-4 sm:mb-6">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-sky-main text-primary flex items-center justify-center border border-sky-line shrink-0">
+                  <Clock className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
                 </div>
-                <HeadingAtom level={3} className="text-2xl text-primary font-bold">
+                <HeadingAtom level={3} className="text-xl sm:text-2xl text-primary font-bold">
                   Visiting Hours
                 </HeadingAtom>
               </div>
 
-              <div className="space-y-3 mb-6 text-foreground text-lg">
+              <div className="space-y-2.5 sm:space-y-3 mb-5 sm:mb-6 text-foreground text-sm sm:text-lg">
                 <div className="flex justify-between py-1.5 border-b border-sky-line/40">
                   <span className="font-medium">Monday – Friday</span>
                   <span className="text-primary font-semibold">8:00 AM – 6:30 PM</span>
@@ -168,8 +170,8 @@ export const ServiceAreaHoursOrganism: React.FC = () => {
             </div>
 
             {/* Emergency Notice */}
-            <div className="p-4 rounded-xl bg-sky-main/40 border border-sky-line text-sm text-foreground flex items-start gap-3">
-              <AlertTriangle className="w-5 h-5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
+            <div className="p-3.5 sm:p-4 rounded-xl bg-sky-main/40 border border-sky-line text-xs sm:text-sm text-foreground flex items-start gap-3">
+              <AlertTriangle className="w-4 h-4 sm:w-5 sm:h-5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
               <p className="text-ink-muted leading-relaxed">
                 {SITE_CONTENT.areaAndHours.emergencyText}
               </p>

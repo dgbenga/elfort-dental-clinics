@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Phone, MessageSquare } from 'lucide-react';
 import { WhatsAppCTAButton } from '@/components/molecules/WhatsAppCTAButton';
 import { SITE_CONTENT, PRACTICE_CONFIG } from '@/data/content';
+import { buildWhatsAppUrl } from '@/lib/utils';
 
 export const HeaderOrganism: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -19,6 +20,23 @@ export const HeaderOrganism: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Prevent background scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
+  const quickWhatsAppUrl = buildWhatsAppUrl(
+    PRACTICE_CONFIG.whatsappRaw,
+    SITE_CONTENT.hero.prefilledText
+  );
+
   return (
     <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-border shadow-xs relative">
       {/* Scroll Reading Progress Bar */}
@@ -32,7 +50,7 @@ export const HeaderOrganism: React.FC = () => {
         aria-label="Reading progress"
       />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
         {/* Brand Identity - Perfectly Aligned */}
         <a
           href="#"
@@ -51,9 +69,14 @@ export const HeaderOrganism: React.FC = () => {
             </svg>
           </div>
 
-          <span className="text-lg sm:text-xl font-extrabold tracking-tight text-primary group-hover:text-primary-hover transition-colors">
-            {PRACTICE_CONFIG.practiceName}
-          </span>
+          <div className="flex flex-col">
+            <span className="text-base sm:text-xl font-extrabold tracking-tight text-primary group-hover:text-primary-hover transition-colors leading-tight">
+              {PRACTICE_CONFIG.practiceName}
+            </span>
+            <span className="text-[11px] font-medium text-ink-muted leading-none hidden xs:block sm:hidden">
+              Home & Mobile Care
+            </span>
+          </div>
         </a>
 
         {/* Clean, Ordered Desktop Navigation Links */}
@@ -87,12 +110,33 @@ export const HeaderOrganism: React.FC = () => {
           />
         </div>
 
-        {/* Mobile Toggle Button */}
-        <div className="flex items-center sm:hidden">
+        {/* Mobile Header Quick Actions & Toggle */}
+        <div className="flex items-center gap-2 sm:hidden">
+          {/* Quick 1-tap call for immediate reassurance */}
+          <a
+            href={`tel:${PRACTICE_CONFIG.phoneRaw}`}
+            className="w-10 h-10 rounded-xl bg-sky-main text-primary flex items-center justify-center border border-sky-line/80 focus-visible:ring-2 focus-visible:ring-primary active:scale-95 transition-transform"
+            aria-label={`Call dentist directly: ${PRACTICE_CONFIG.phoneDisplay}`}
+          >
+            <Phone className="w-4 h-4 text-primary" aria-hidden="true" />
+          </a>
+
+          {/* Quick WhatsApp intent */}
+          <a
+            href={quickWhatsAppUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-10 h-10 rounded-xl bg-primary text-white flex items-center justify-center border border-primary/20 focus-visible:ring-2 focus-visible:ring-primary active:scale-95 transition-transform"
+            aria-label="Message dentist on WhatsApp"
+          >
+            <MessageSquare className="w-4 h-4 text-white" aria-hidden="true" />
+          </a>
+
+          {/* Menu Drawer Toggle */}
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="w-10 h-10 rounded-lg bg-secondary text-primary flex items-center justify-center border border-border focus-visible:ring-2 focus-visible:ring-primary"
+            className="w-10 h-10 rounded-xl bg-secondary text-primary flex items-center justify-center border border-border focus-visible:ring-2 focus-visible:ring-primary active:scale-95 transition-transform"
             aria-label="Toggle navigation menu"
             aria-expanded={mobileMenuOpen}
           >
@@ -105,36 +149,65 @@ export const HeaderOrganism: React.FC = () => {
         </div>
       </div>
 
-      {/* Clean Mobile Drawer */}
+      {/* Mobile Drawer Overlay Backdrop */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-border px-4 pt-3 pb-6 shadow-xl animate-in fade-in slide-in-from-top-2 duration-200">
-          <nav className="flex flex-col space-y-1" aria-label="Mobile Navigation">
+        <div
+          className="fixed inset-0 top-16 bg-[#0B3A75]/30 backdrop-blur-xs z-40 md:hidden"
+          onClick={() => setMobileMenuOpen(false)}
+          aria-hidden="true"
+        />
+      )}
+
+      {/* Clean Senior-Friendly Mobile Drawer */}
+      {mobileMenuOpen && (
+        <div className="md:hidden relative z-50 bg-white border-t border-border px-5 pt-4 pb-8 shadow-2xl animate-in fade-in slide-in-from-top-2 duration-200 max-h-[calc(100vh-4rem)] overflow-y-auto">
+          {/* Live Availability Pill */}
+          <div className="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-sky-main text-xs font-semibold text-primary border border-sky-line mb-4">
+            <span className="flex items-center gap-2">
+              <span className="relative flex h-2 w-2">
+                <span className="motion-safe:animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600" />
+              </span>
+              <span>Available for visits this week</span>
+            </span>
+            <span className="text-[11px] font-mono text-ink-muted">Mon–Sat</span>
+          </div>
+
+          {/* Navigation Links with generous 50px touch targets */}
+          <nav className="flex flex-col divide-y divide-sky-line/40" aria-label="Mobile Navigation">
             {SITE_CONTENT.header.navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-base font-semibold text-foreground/80 hover:text-primary hover:bg-secondary px-3.5 py-2.5 rounded-lg transition-colors"
+                className="flex items-center justify-between text-lg font-bold text-primary hover:bg-sky-main/60 py-3.5 px-3 rounded-xl transition-colors active:scale-[0.99]"
               >
-                {link.label}
+                <span>{link.label}</span>
+                <span className="text-primary/40 text-sm font-semibold">→</span>
               </a>
             ))}
           </nav>
 
-          <div className="mt-4 pt-4 border-t border-border space-y-3">
-            <div className="flex items-center justify-center gap-2 py-1 text-xs font-medium text-ink-muted">
-              <span className="relative flex h-2 w-2">
-                <span className="motion-safe:animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600" />
-              </span>
-              <span>Online · Available for visits this week</span>
-            </div>
+          {/* Direct Contact Actions */}
+          <div className="mt-5 pt-4 border-t border-sky-line/80 space-y-3">
             <WhatsAppCTAButton
               size="default"
               label="Chat on WhatsApp"
               locationTag="mobile_menu"
-              className="w-full text-center h-11 text-base font-semibold"
+              className="w-full text-center h-12 text-base font-bold shadow-xs"
             />
+
+            <a
+              href={`tel:${PRACTICE_CONFIG.phoneRaw}`}
+              className="flex items-center justify-center gap-2.5 w-full h-12 rounded-xl bg-white text-primary font-bold text-base border-2 border-sky-line hover:bg-sky-main active:scale-[0.98] transition-all shadow-2xs"
+            >
+              <Phone className="w-4 h-4 text-primary shrink-0" aria-hidden="true" />
+              <span>Call: {PRACTICE_CONFIG.phoneDisplay}</span>
+            </a>
+
+            <p className="text-center text-xs text-ink-muted pt-1">
+              Free to ask · No forms · Replies in ~30 mins
+            </p>
           </div>
         </div>
       )}

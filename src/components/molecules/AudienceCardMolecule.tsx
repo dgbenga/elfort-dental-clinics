@@ -28,21 +28,21 @@ export const AudienceCardMolecule: React.FC<AudienceCardMoleculeProps> = ({
     <CardAtom
       variant="default"
       className={cn(
-        'flex flex-col h-full bg-white border border-sky-line hover:border-primary/40 transition-colors',
+        'flex flex-col h-full bg-white border border-sky-line hover:border-primary/40 transition-colors p-5 sm:p-7 rounded-2xl',
         className
       )}
     >
-      <div className="mb-5">
+      <div className="mb-4 sm:mb-5">
         <IconWrapperAtom variant="sky" size="md">
-          <IconComponent className="w-6 h-6 text-primary" aria-hidden="true" />
+          <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-primary" aria-hidden="true" />
         </IconWrapperAtom>
       </div>
 
-      <HeadingAtom level={3} className="text-2xl mb-3 text-primary font-bold">
+      <HeadingAtom level={3} className="text-xl sm:text-2xl mb-2 sm:mb-3 text-primary font-bold">
         {audience.title}
       </HeadingAtom>
 
-      <p className="text-foreground text-lg leading-relaxed">
+      <p className="text-foreground text-base sm:text-lg leading-relaxed">
         {audience.description}
       </p>
     </CardAtom>

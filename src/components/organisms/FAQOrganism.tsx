@@ -19,13 +19,13 @@ export const FAQOrganism: React.FC = () => {
   });
 
   return (
-    <section id="faq" className="py-14 sm:py-20 bg-sky-main/40 border-b border-sky-line/50">
+    <section id="faq" className="py-12 sm:py-20 bg-sky-main/40 border-b border-sky-line/50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
-          <HeadingAtom level={2} className="text-3xl sm:text-4xl mb-4">
+        <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-10">
+          <HeadingAtom level={2} className="text-3xl sm:text-4xl mb-3 sm:mb-4">
             {SITE_CONTENT.faq.title}
           </HeadingAtom>
-          <p className="text-lg sm:text-xl text-ink-muted leading-relaxed">
+          <p className="text-base sm:text-xl text-ink-muted leading-relaxed">
             {SITE_CONTENT.faq.subtitle}
           </p>
         </div>
@@ -98,18 +98,18 @@ export const FAQOrganism: React.FC = () => {
         )}
 
         {/* Have another question? Banner */}
-        <div className="mt-10 p-8 rounded-2xl bg-white border border-sky-line shadow-clinical text-center max-w-2xl mx-auto">
-          <span className="text-xl font-bold text-primary block mb-2">
+        <div className="mt-8 sm:mt-10 p-5 sm:p-8 rounded-2xl bg-white border border-sky-line shadow-clinical text-center max-w-2xl mx-auto">
+          <span className="text-lg sm:text-xl font-bold text-primary block mb-2">
             Have a specific question about your home or loved one?
           </span>
-          <p className="text-foreground text-lg mb-6 leading-relaxed">
+          <p className="text-foreground text-sm sm:text-lg mb-5 sm:mb-6 leading-relaxed">
             We are always happy to answer questions with zero obligation before you decide to book.
           </p>
           <WhatsAppCTAButton
             label="Ask a Question on WhatsApp"
             prefilledText="Hello Elfort Dental Clinics, I have a question about whether a home visit or outreach is right for my situation."
             locationTag="faq_cta"
-            className="w-full sm:w-auto"
+            className="w-full sm:w-auto h-[52px]"
           />
         </div>
       </div>

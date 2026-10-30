@@ -17,13 +17,13 @@ export const FAQAccordionItem: React.FC<FAQAccordionItemProps> = ({
     <Accordion.Item
       value={item.id}
       className={cn(
-        'rounded-2xl bg-white border border-sky-line shadow-clinical overflow-hidden transition-all duration-200 mb-4 data-[state=open]:border-primary/40 data-[state=open]:shadow-clinical-hover',
+        'rounded-2xl bg-white border border-sky-line shadow-clinical overflow-hidden transition-all duration-200 mb-3 sm:mb-4 data-[state=open]:border-primary/40 data-[state=open]:shadow-clinical-hover',
         className
       )}
     >
       <Accordion.Header className="flex">
-        <Accordion.Trigger className="group flex flex-1 items-center justify-between p-6 text-left font-semibold text-lg sm:text-xl text-primary transition-all hover:bg-sky-main/30 min-h-[58px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset">
-          <span className="pr-4 leading-snug">{item.question}</span>
+        <Accordion.Trigger className="group flex flex-1 items-center justify-between p-4 sm:p-6 text-left font-semibold text-base sm:text-xl text-primary transition-all hover:bg-sky-main/30 min-h-[54px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset">
+          <span className="pr-3 leading-snug">{item.question}</span>
           <div className="w-8 h-8 rounded-full bg-sky-main flex items-center justify-center shrink-0 border border-sky-line group-hover:bg-sky-deep transition-colors">
             <ChevronDown
               className="w-4 h-4 text-primary shrink-0 transition-transform duration-200 group-data-[state=open]:rotate-180"
@@ -33,7 +33,7 @@ export const FAQAccordionItem: React.FC<FAQAccordionItemProps> = ({
         </Accordion.Trigger>
       </Accordion.Header>
       <Accordion.Content className="overflow-hidden transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
-        <div className="px-6 pb-6 pt-1 text-foreground text-lg leading-relaxed border-t border-sky-line/40">
+        <div className="px-4 pb-4 sm:px-6 sm:pb-6 pt-1 text-foreground text-sm sm:text-lg leading-relaxed border-t border-sky-line/40">
           {item.answer}
         </div>
       </Accordion.Content>

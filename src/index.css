@@ -86,6 +86,15 @@
   padding-bottom: env(safe-area-inset-bottom, 1rem);
 }
 
+/* Hide scrollbar utility for clean mobile horizontal pill carousels */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* Sticky card deck stacking configuration for ServicesPricingOrganism */
 .card-stack-item {
   --stack-top-base: 4.5rem;

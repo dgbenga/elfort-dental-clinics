@@ -4,7 +4,7 @@ import { PRACTICE_CONFIG, SITE_CONTENT } from '@/data/content';
 
 export const FooterOrganism: React.FC = () => {
   return (
-    <footer className="bg-[#082C5A] text-white/80 py-16 border-t border-white/10 pb-24 md:pb-16">
+    <footer className="bg-[#082C5A] text-white/80 py-12 sm:py-16 border-t border-white/10 pb-28 md:pb-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
           {/* Practice Info */}
