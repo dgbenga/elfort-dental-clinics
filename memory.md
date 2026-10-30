@@ -113,4 +113,25 @@ Living multi-session state snapshot maintained per `AGENTS.md` and the `remember
 - `npm run build` (`tsc -b && vite build`) passing green with 0 errors.
 - Git working tree clean. Remote branch up to date.
 
+---
+
+## Session Checkpoint: Restored Cards Overlay Deck & Minimalist Icon Actions (2026-10-30T18:15:00+01:00)
+
+### 1. Work Completed
+- **Restored Cards Stacking Overlay (`src/components/organisms/ServicesPricingOrganism.tsx`)**:
+  - Fully restored the sticky stacking landscape card deck (`card-stack-item sticky`) across all screen sizes (mobile and desktop).
+  - Cards smoothly slide and stack over one another on scroll.
+- **Replaced Bulky Buttons with Small Minimalist Icons (`src/components/molecules/MinimalistContactActions.tsx`)**:
+  - Created reusable `MinimalistContactActions` molecule providing small, sleek circular/rounded icon buttons for WhatsApp and direct Call.
+  - Eliminated bulky text buttons ("Chat on WhatsApp", "Book Scaling & Polishing") and full phone number displays across:
+    - **Service Cards (`ServiceCardMolecule.tsx`)**: Compact header and footer minimalist action icons.
+    - **Hero Section (`HeroOrganism.tsx`)**: Small minimalist WhatsApp and phone call icons with subtle micro-caption.
+    - **Floating CTA (`FloatingWhatsAppCTAOrganism.tsx`)**: Compact circular floating icons in bottom corner without screen-blocking text bars.
+    - **Header & Mobile Drawer (`HeaderOrganism.tsx`)**: Minimalist icon controls.
+    - **Final CTA Band, Meet Dentist, Outreach, Service Area & FAQ**: Clean minimalist icon triggers.
+- **Git & GitHub Deployment**:
+  - Committed as `5eab552` and pushed to `origin/main` at `https://github.com/dgbenga/elfort-dental-clinics.git`.
+  - Production build passing with 0 errors.
+
+
 
