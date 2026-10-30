@@ -96,3 +96,4 @@ export const MinimalistContactActions: React.FC<MinimalistContactActionsProps> =
     </div>
   );
 };
+

@@ -21,7 +21,7 @@ ReactDOM.createRoot(rootElement).render(
           <div className="max-w-md bg-white p-8 rounded-2xl border border-sky-line shadow-clinical">
             <h1 className="text-2xl font-bold text-primary mb-3">Something went wrong</h1>
             <p className="text-foreground text-lg mb-6 leading-relaxed">
-              We encountered a minor issue loading this page. Please refresh or message Elfort Dental Clinics directly on WhatsApp.
+              We encountered a minor issue loading this page. Please refresh or message Elfort Dental Clinic directly on WhatsApp.
             </p>
             <a
               href="https://wa.me/2348144199019"

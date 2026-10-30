@@ -48,9 +48,9 @@ export const FooterOrganism: React.FC = () => {
               Clinical & Outreach Standards
             </span>
             <div className="space-y-2 text-sm text-white/70">
-              <p>Licensed Dental Surgery & Mobile Clinical Team.</p>
+              <p>Licensed Dental Practice & Mobile Clinical Team.</p>
               <p>Community Dental Outreach & Corporate Wellness Division.</p>
-              <p>Church & Community Free Consultation Partner.</p>
+              <p>Church & Community Consultation Partner (Terms & Conditions Apply).</p>
               <p>{PRACTICE_CONFIG.insuranceText}.</p>
               <p>Hospital-grade sterilization & vacuum-sealed instrument packaging.</p>
             </div>

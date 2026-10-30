@@ -109,7 +109,7 @@ export const ServiceAreaHoursOrganism: React.FC = () => {
                       <span className="text-xs font-semibold text-emerald-900">Book visit:</span>
                       <MinimalistContactActions
                         size="sm"
-                        prefilledText={`Hello Elfort Dental Clinics, I verified my postal code (${postcode.toUpperCase()}) on your website and would like to ask about booking a home visit.`}
+                        prefilledText={`Hello Elfort Dental Clinic, I verified my postal code (${postcode.toUpperCase()}) on your website and would like to ask about booking a home visit.`}
                         locationTag="postcode_eligible_cta"
                       />
                     </div>
@@ -128,7 +128,7 @@ export const ServiceAreaHoursOrganism: React.FC = () => {
                       <span className="text-xs font-semibold text-primary">Ask about visiting:</span>
                       <MinimalistContactActions
                         size="sm"
-                        prefilledText={`Hello Elfort Dental Clinics, my postal code is ${postcode.toUpperCase()} and I would like to check if a home visit can be arranged.`}
+                        prefilledText={`Hello Elfort Dental Clinic, my postal code is ${postcode.toUpperCase()} and I would like to check if a home visit can be arranged.`}
                         locationTag="postcode_inquire_cta"
                       />
                     </div>

@@ -130,7 +130,7 @@ export const HeroOrganism: React.FC = () => {
               <div className="space-y-2 text-xs text-foreground">
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-3.5 h-3.5 text-primary shrink-0" aria-hidden="true" />
-                  <span>Living room or armchair treatment in your comfort</span>
+                  <span>Mobile dental chair brought directly to your location</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <ShieldCheck className="w-3.5 h-3.5 text-primary shrink-0" aria-hidden="true" />
@@ -186,10 +186,10 @@ export const HeroOrganism: React.FC = () => {
                   </div>
                   <div>
                     <span className="font-semibold text-primary block text-sm leading-snug">
-                      Living Room or Armchair Care
+                      Mobile Dental Chair Setup
                     </span>
                     <span className="text-xs text-foreground/90 leading-relaxed block">
-                      Treated comfortably in your home with quiet portable dental equipment.
+                      Treated comfortably with our specialized portable chair and quiet clinical unit.
                     </span>
                   </div>
                 </div>

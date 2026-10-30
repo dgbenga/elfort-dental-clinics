@@ -12,7 +12,7 @@ export interface WhatsAppCTAButtonProps extends Omit<ButtonProps, 'children'> {
 }
 
 export const WhatsAppCTAButton: React.FC<WhatsAppCTAButtonProps> = ({
-  prefilledText = "Hello Elfort Dental Clinics, I'd like to ask about booking a mobile dental visit.",
+  prefilledText = "Hello Elfort Dental Clinic, I'd like to ask about booking a mobile dental visit.",
   label = 'Message Us on WhatsApp',
   subLabel,
   locationTag = 'general',

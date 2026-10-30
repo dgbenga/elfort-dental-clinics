@@ -76,7 +76,7 @@ export const EquipmentSafetyOrganism: React.FC = () => {
             </ul>
 
             <div className="mt-5 sm:mt-6 pt-3 sm:pt-4 border-t border-sky-line/50 text-xs text-ink-muted">
-              <span>No specialized dental chairs or plumbing required in your home.</span>
+              <span>We bring our own specialized mobile dental chair—no special furniture or plumbing required.</span>
             </div>
           </CardAtom>
         </div>

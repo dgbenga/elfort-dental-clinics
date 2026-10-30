@@ -34,11 +34,11 @@ export interface OutreachPillar {
 }
 
 export const PRACTICE_CONFIG = {
-  practiceName: 'Elfort Dental Clinics',
-  dentistName: 'Elfort Dental Clinics',
-  credentials: 'BDS, Licensed Dental Surgeons',
-  title: 'Licensed Dental Surgeons & Mobile Oral Healthcare Team',
-  regulatorText: 'Licensed Dental Surgery Practice · Full Clinical Compliance',
+  practiceName: 'Elfort Dental Clinic',
+  dentistName: 'Elfort Dental Clinic',
+  credentials: 'Licensed Dental Practitioner & Therapist',
+  title: 'Licensed Dental Practitioners & Mobile Oral Healthcare Team',
+  regulatorText: 'Licensed Dental Practice · Full Clinical Compliance',
   insuranceText: 'Hospital-Grade Sterilization & Strict Cross-Infection Control',
   phoneDisplay: '0814 419 9019',
   phoneRaw: '+2348144199019',
@@ -55,7 +55,7 @@ export const PRACTICE_CONFIG = {
 
 export const SITE_CONTENT = {
   header: {
-    brandText: 'Elfort Dental Clinics',
+    brandText: 'Elfort Dental Clinic',
     tagline: 'Mobile & Community Dental Care',
     navLinks: [
       { label: 'Services', href: '#services' },
@@ -68,12 +68,12 @@ export const SITE_CONTENT = {
   hero: {
     headline: 'Dental care that comes to you.',
     subheadline:
-      'Elfort Dental Clinics brings friendly, licensed dental care directly to your home, workplace, church, or community. Professional check-ups, cleanings, and specialized preventive treatments—with clear prices and zero stress.',
+      'Elfort Dental Clinic brings friendly, licensed dental care directly to your home, workplace, church, or community. Professional check-ups, cleanings, and specialized preventive treatments—with clear prices and zero stress.',
     primaryButtonText: 'Message Us on WhatsApp',
     secondaryButtonText: 'Call: 0814 419 9019',
-    prefilledText: "Hello Elfort Dental Clinics, I'd like to ask about booking a mobile dental visit.",
+    prefilledText: "Hello Elfort Dental Clinic, I'd like to ask about booking a mobile dental visit.",
     trustPoints: [
-      { icon: 'Award', text: 'Licensed Dental Surgeons' },
+      { icon: 'Award', text: 'Licensed Dental Practitioners' },
       { icon: 'ShieldCheck', text: 'Sterile, Single-Use Instruments' },
       { icon: 'Tag', text: 'Transparent Upfront Pricing' },
     ],
@@ -98,7 +98,7 @@ export const SITE_CONTENT = {
         number: '03',
         title: 'We come to you',
         description:
-          'Our dental team arrives on time with compact, hospital-grade portable equipment. We treat you gently at your own pace, tidy up completely, and leave you in comfort.',
+          'Our dental team arrives on time with our compact mobile dental chair and sterile portable equipment. We treat you gently at your own pace, tidy up completely, and leave you in comfort.',
       },
     ] as StepItem[],
   },
@@ -129,7 +129,7 @@ export const SITE_CONTENT = {
         icon: 'Users',
         title: 'Churches & Community Groups',
         description:
-          'We organize outreach programs partnering with churches, mosques, companies, and community groups to provide free dental consultations and screenings.',
+          'We organize outreach programs partnering with churches, mosques, companies, and community groups to provide dental consultations and screenings (Terms & Conditions apply).',
       },
     ] as AudienceItem[],
   },
@@ -153,7 +153,7 @@ export const SITE_CONTENT = {
           'Oral health assessment & hygiene counseling',
         ],
         buttonText: 'Book Scaling & Polishing',
-        prefilledText: "Hello Elfort Dental Clinics, I'd like to book a Scaling and Polishing session.",
+        prefilledText: "Hello Elfort Dental Clinic, I'd like to book a Scaling and Polishing session.",
       },
       {
         id: 'root-planing',
@@ -168,7 +168,7 @@ export const SITE_CONTENT = {
           'Encourages healthy gum reattachment & tissue healing',
         ],
         buttonText: 'Inquire About Root Planing',
-        prefilledText: "Hello Elfort Dental Clinics, I'm inquiring about Subgingival Scaling and Root Planing for gum care.",
+        prefilledText: "Hello Elfort Dental Clinic, I'm inquiring about Subgingival Scaling and Root Planing for gum care.",
       },
       {
         id: 'sealant-fluoride-desensitization',
@@ -183,22 +183,22 @@ export const SITE_CONTENT = {
           '100% painless, non-invasive preventive therapy',
         ],
         buttonText: 'Book Preventive Care',
-        prefilledText: "Hello Elfort Dental Clinics, I need Fissure Sealant, Fluoride treatment, or tooth desensitization.",
+        prefilledText: "Hello Elfort Dental Clinic, I need Fissure Sealant, Fluoride treatment, or tooth desensitization.",
       },
       {
         id: 'whitening',
         title: 'Professional Teeth Whitening',
         price: 'Cosmetic Rate',
         description:
-          'Dentist-supervised cosmetic whitening treatment formulated to safely lift deep discoloration, surface stains, and restore a bright, radiant smile.',
+          'Supervised cosmetic whitening treatment formulated to safely lift deep discoloration, surface stains, and restore a bright, radiant smile.',
         features: [
-          'Dentist-formulated, enamel-safe whitening gel',
+          'Professionally formulated, enamel-safe whitening gel',
           'Lifts deep stains from coffee, tea, and aging',
           'Noticeable shade lightening in a single session',
           'Custom gum protection and home care advice',
         ],
         buttonText: 'Book Teeth Whitening',
-        prefilledText: "Hello Elfort Dental Clinics, I'd like to book an appointment for Professional Teeth Whitening.",
+        prefilledText: "Hello Elfort Dental Clinic, I'd like to book an appointment for Professional Teeth Whitening.",
       },
       {
         id: 'counseling',
@@ -213,24 +213,24 @@ export const SITE_CONTENT = {
           'Guidance on caring for children or eldercare oral health',
         ],
         buttonText: 'Inquire About Counseling',
-        prefilledText: "Hello Elfort Dental Clinics, I'd like to consult on Oral Hygiene Counseling and home care.",
+        prefilledText: "Hello Elfort Dental Clinic, I'd like to consult on Oral Hygiene Counseling and home care.",
       },
     ] as ServiceItem[],
   },
   outreach: {
     title: 'Community Outreaches & Institutional Partnerships',
     subtitle:
-      'We partner with churches, corporations, community groups, and NGOs to provide free dental examinations and oral health consultations.',
+      'We partner with churches, corporations, community groups, and NGOs to provide dental examinations and oral health consultations (Terms & Conditions apply).',
     description:
-      'At Elfort Dental Clinics, we believe quality oral healthcare should be accessible to everyone. We regularly organize community outreaches and partner with religious organizations, businesses, and civic groups to screen, educate, and empower communities toward healthier smiles.',
+      'At Elfort Dental Clinic, we believe quality oral healthcare should be accessible to everyone. We regularly organize community outreaches and partner with religious organizations, businesses, and civic groups to screen, educate, and empower communities toward healthier smiles.',
     pillars: [
       {
         icon: 'Church',
         title: 'Churches & Religious Bodies',
         description:
-          'We collaborate with churches, mosques, and faith fellowships to organize weekend dental outreach days, providing free oral screenings and health talks to congregations.',
+          'We collaborate with churches, mosques, and faith fellowships to organize weekend dental outreach days, providing oral screenings and health talks to congregations.',
         benefits: [
-          'Free oral examinations & consultation',
+          'Free oral examinations & consultation (Terms & Conditions apply)',
           'Educational dental talk during fellowship',
           'Personalized oral hygiene recommendations',
           'Subsidized follow-up treatment plans',
@@ -254,8 +254,8 @@ export const SITE_CONTENT = {
         description:
           'We team up with community leaders, charitable NGOs, and youth/elderly associations to conduct impactful public oral health missions.',
         benefits: [
-          'Large-scale public dental screening drives',
-          'Free consultations and dental hygiene kits',
+          'Public dental screening drives (Terms & Conditions apply)',
+          'Oral health consultations and dental hygiene kits',
           'Care home and vulnerable population visits',
           'Comprehensive outreach coordination',
         ],
@@ -263,7 +263,7 @@ export const SITE_CONTENT = {
     ] as OutreachPillar[],
     ctaText: 'Partner With Us for an Outreach',
     prefilledText:
-      'Hello Elfort Dental Clinics, I would like to discuss organizing a community or corporate dental outreach with our organization/church.',
+      'Hello Elfort Dental Clinic, I would like to discuss organizing a community or corporate dental outreach with our organization/church.',
   },
   equipment: {
     title: 'What we bring, and what you provide',
@@ -272,17 +272,18 @@ export const SITE_CONTENT = {
     weBring: {
       title: 'What Elfort Dental Brings (100% Self-Contained)',
       items: [
+        'Compact, ergonomic mobile dental chair brought directly to your location',
         'Hospital-grade sterile instruments in vacuum-sealed surgical pouches (unsealed in front of you)',
         'High-intensity medical LED headlamp and clinical dental loupes for precision vision',
         'Compact, whisper-quiet mobile dental unit with suction, scaler, and polishing handpiece',
-        'Disposable protective coverings for your furniture and treatment area',
+        'Disposable protective coverings for your treatment area',
         'Clinical sharps container and safe medical waste disposal bags',
       ],
     },
     youProvide: {
       title: 'All You Need in Your Home or Venue',
       items: [
-        'A comfortable armchair, recliner, sofa, or desk chair where the patient can lean back comfortably',
+        'A clear floor space (approx. 2m × 2m) for our mobile dental chair and clinical setup',
         'Access to one standard household or office electrical plug socket',
         'Adequate room lighting (a window or standard ceiling light)',
         'A small clear table, desk, or countertop for our sterile instrument tray',
@@ -340,13 +341,13 @@ export const SITE_CONTENT = {
     ],
   },
   about: {
-    title: 'Meet Elfort Dental Clinics',
+    title: 'Meet Elfort Dental Clinic',
     bioParagraph1:
-      'Elfort Dental Clinics was founded on a simple, compassionate conviction: dental care should be accessible, humane, and free of the intimidating barriers of traditional clinics. Too many families, shift workers, and frail elders suffer in silence because visiting a surgery is physically daunting or incompatible with their schedules.',
+      'Elfort Dental Clinic was founded on a simple, compassionate conviction: dental care should be accessible, humane, and free of the intimidating barriers of traditional clinic waiting rooms. Too many families, shift workers, and frail elders suffer in silence because visiting a clinic is physically daunting or incompatible with their schedules.',
     bioParagraph2:
-      'Whether we are visiting an individual in their private living room, conducting a corporate wellness check for an office team, or partnering with a church for a free community outreach, our team delivers unhurried, gentle, and hospital-grade dental care with personal warmth and total transparency.',
+      'Whether we are setting up our mobile dental chair in your private living room, conducting a corporate wellness check for an office team, or partnering with a church for a community outreach, our licensed dental team delivers unhurried, gentle, and hospital-grade dental care with personal warmth and total transparency.',
     ctaButtonText: 'Message Elfort Dental on WhatsApp',
-    prefilledText: 'Hello Elfort Dental Clinics, I would love to learn more about your services and book an appointment.',
+    prefilledText: 'Hello Elfort Dental Clinic, I would love to learn more about your services and book an appointment.',
   },
   faq: {
     title: 'Frequently asked questions',
@@ -362,7 +363,7 @@ export const SITE_CONTENT = {
         id: 'faq-2',
         question: 'How do community and church outreaches work?',
         answer:
-          'We partner with churches, companies, and community organizations to host dental health days. Our team provides free dental examinations, oral cancer screenings, and one-on-one oral hygiene counseling for attendees. We can tailor the outreach to your venue size and schedule.',
+          'We partner with churches, companies, and community organizations to host dental health days. Our team provides free dental examinations, oral cancer screenings, and one-on-one oral hygiene counseling for attendees (Terms & Conditions apply based on location, venue suitability, and attendee numbers). We can tailor the outreach to your venue size and schedule.',
       },
       {
         id: 'faq-3',
@@ -380,7 +381,7 @@ export const SITE_CONTENT = {
         id: 'faq-5',
         question: 'Can you visit my workplace or company office?',
         answer:
-          'Yes! Many of our patients are busy executives and corporate teams. With access to a quiet room or meeting space with a standard plug socket, we can provide scaling, polishing, and consultations during lunch breaks or corporate health days.',
+          'Yes! Many of our patients are busy executives and corporate teams. With access to a quiet room or meeting space with a standard plug socket, we set up our compact mobile dental chair to provide scaling, polishing, and consultations during lunch breaks or corporate health days.',
       },
       {
         id: 'faq-6',
@@ -390,7 +391,7 @@ export const SITE_CONTENT = {
       },
       {
         id: 'faq-7',
-        question: 'How do I contact or book with Elfort Dental Clinics?',
+        question: 'How do I contact or book with Elfort Dental Clinic?',
         answer:
           'You can message us directly on WhatsApp at 0814 419 9019, call our phone line at 0814 419 9019, or email us at elfortdentalclinics@gmail.com. We usually respond within 30 minutes during working hours.',
       },
@@ -401,7 +402,7 @@ export const SITE_CONTENT = {
     subtitle: 'Providing mobile dental visits and community outreaches.',
     catchmentTitle: 'Where We Operate',
     catchmentText:
-      'Elfort Dental Clinics provides mobile dental care to private residences, corporate offices, churches, and community venues across our catchment perimeter.',
+      'Elfort Dental Clinic provides mobile dental care to private residences, corporate offices, churches, and community venues across our catchment perimeter.',
     travelNote:
       'Standard local visits include clear, upfront pricing agreed before we travel. For group outreaches and community events, custom logistic arrangements are coordinated with your leadership team.',
     emergencyTitle: 'Urgent Care & Severe Emergencies',
@@ -411,9 +412,9 @@ export const SITE_CONTENT = {
   finalCTA: {
     title: 'Ready for gentle dental care that comes to you?',
     subtitle:
-      "Send Elfort Dental Clinics a quick WhatsApp message or give us a call. Whether you need a personal home visit or want to organize a community outreach, we're ready to help.",
+      "Send Elfort Dental Clinic a quick WhatsApp message or give us a call. Whether you need a personal home visit or want to organize a community outreach, we're ready to help.",
     buttonText: 'Message on WhatsApp',
-    prefilledText: "Hello Elfort Dental Clinics, I'd like to book an appointment or discuss a visit.",
+    prefilledText: "Hello Elfort Dental Clinic, I'd like to book an appointment or discuss a visit.",
     phonePrompt: 'Prefer to call us directly?',
     microCopy: 'No pressure · Clear prices · Dedicated mobile & community team',
   },

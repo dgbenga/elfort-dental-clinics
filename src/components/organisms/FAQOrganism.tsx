@@ -85,12 +85,12 @@ export const FAQOrganism: React.FC = () => {
               No matching questions found
             </span>
             <p className="text-foreground text-base mb-4 leading-relaxed">
-              We couldn&apos;t find an answer matching &ldquo;{searchQuery}&rdquo;. Send Dr. Elfort a quick message and we will answer you directly!
+              We couldn&apos;t find an answer matching &ldquo;{searchQuery}&rdquo;. Send Elfort Dental Clinic a quick message and we will answer you directly!
             </p>
             <div className="flex items-center justify-center gap-3">
               <MinimalistContactActions
                 size="md"
-                prefilledText={`Hello Elfort Dental Clinics, I was searching your FAQs about "${searchQuery}" and would like to ask directly.`}
+                prefilledText={`Hello Elfort Dental Clinic, I was searching your FAQs about "${searchQuery}" and would like to ask directly.`}
                 locationTag="faq_empty_search"
               />
             </div>
@@ -107,7 +107,7 @@ export const FAQOrganism: React.FC = () => {
           </p>
           <div className="flex items-center justify-center gap-3">
             <MinimalistContactActions
-              prefilledText="Hello Elfort Dental Clinics, I have a question about whether a home visit or outreach is right for my situation."
+              prefilledText="Hello Elfort Dental Clinic, I have a question about whether a home visit or outreach is right for my situation."
               locationTag="faq_cta"
               size="md"
             />
