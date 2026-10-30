@@ -85,3 +85,24 @@
 .pb-safe {
   padding-bottom: env(safe-area-inset-bottom, 1rem);
 }
+
+/* Sticky card deck stacking configuration for ServicesPricingOrganism */
+.card-stack-item {
+  --stack-top-base: 4.5rem;
+  --stack-step: 0.65rem;
+  will-change: transform;
+}
+
+@media (min-width: 640px) {
+  .card-stack-item {
+    --stack-top-base: 5rem;
+    --stack-step: 0.85rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-stack-item {
+    --stack-top-base: 5.5rem;
+    --stack-step: 1.1rem;
+  }
+}

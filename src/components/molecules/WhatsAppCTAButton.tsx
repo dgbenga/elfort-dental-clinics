@@ -8,6 +8,7 @@ export interface WhatsAppCTAButtonProps extends Omit<ButtonProps, 'children'> {
   label?: string;
   subLabel?: string;
   locationTag?: string;
+  containerClassName?: string;
 }
 
 export const WhatsAppCTAButton: React.FC<WhatsAppCTAButtonProps> = ({
@@ -15,6 +16,7 @@ export const WhatsAppCTAButton: React.FC<WhatsAppCTAButtonProps> = ({
   label = 'Message Us on WhatsApp',
   subLabel,
   locationTag = 'general',
+  containerClassName,
   className,
   variant = 'primary',
   size = 'default',
@@ -33,12 +35,12 @@ export const WhatsAppCTAButton: React.FC<WhatsAppCTAButtonProps> = ({
   };
 
   return (
-    <div className="inline-flex flex-col items-center gap-1.5 w-full sm:w-auto">
+    <div className={cn('inline-flex flex-col items-center gap-1.5 w-full', containerClassName || 'sm:w-auto')}>
       <ButtonAtom
         asChild
         variant={variant}
         size={size}
-        className={cn('w-full sm:w-auto gap-3 text-center', className)}
+        className={cn('w-full gap-3 text-center', !containerClassName && 'sm:w-auto', className)}
         {...props}
       >
         <a
