@@ -1,5 +1,5 @@
 import React from 'react';
-import { Church, Building2, Users2, Check, Mail, Phone, HeartHandshake } from 'lucide-react';
+import { Church, Building2, Users2, Check, Mail, Phone } from 'lucide-react';
 import { HeadingAtom } from '@/components/atoms/HeadingAtom';
 import { CardAtom } from '@/components/atoms/CardAtom';
 import { WhatsAppCTAButton } from '@/components/molecules/WhatsAppCTAButton';
@@ -12,11 +12,6 @@ export const CommunityOutreachOrganism: React.FC = () => {
     <section id="outreach" className="py-14 sm:py-20 bg-sky-main/50 border-b border-sky-line/50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-10 sm:mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-bold mb-4 border border-primary/20">
-            <HeartHandshake className="w-4 h-4 text-primary" aria-hidden="true" />
-            <span>Community Health Mission</span>
-          </div>
-
           <HeadingAtom level={2} className="text-3xl sm:text-4xl lg:text-[2.65rem] mb-4">
             {SITE_CONTENT.outreach.title}
           </HeadingAtom>
